@@ -1,0 +1,105 @@
+package BaseTests;
+
+import AdminAccess.*;
+import ApproverConrols.ApproverHomepage;
+import ApproverConrols.ApproverLoginPage;
+import ApproverConrols.ApproverTrainingPlanPage;
+import CommonPages.CaseDetailsPage;
+import CommonPages.CaseListPage;
+import CommonPages.DashboardPage;
+import UserControl.User2.User2TPPag;
+import UserControl.User2.User2loginPage;
+import UserControl.User2.UserHomepage;
+import UserControls.User1.User1Homepage;
+import UserControls.User1.User1LoginPage;
+import UserControls.User1.User1TPPag;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import java.time.Duration;
+public class basetest {
+
+    protected PlantPage plantPage;
+    protected DepartmentPage departmentPage;
+    protected PlantDepartmentmappingPage plantDepartmentmappingPage;
+    protected UserMasterApge userMasterApge;
+    protected ApprovalMatrixPage approvalMatrixPage;
+    protected CaseDetailsPage caseDetailsPage;
+    protected CaseListPage caseListPage;
+    protected DashboardPage dashboardPage;
+    protected AdminLoginPage alogin;
+    protected AdminHomepage ahomepage;
+    protected ApproverHomepage approverHomepage;
+    protected ApproverLoginPage approverLoginPage;
+    protected ApproverTrainingPlanPage approverTrainingPlanPage;
+    protected User1Homepage user1Homepage;
+    protected User1LoginPage user1LoginPage;
+    protected User1TPPag user1TPPag;
+    protected UserHomepage userHomepage;
+    protected User2loginPage user2loginPage;
+    protected User2TPPag user2TPPag;
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+    @BeforeMethod
+    public void setup(){
+
+        driver=new ChromeDriver();
+
+        driver.get("http://172.16.30.59:8080/ords/f?p=172:LOGIN:4323551477942:::::");
+
+        driver.manage().window().maximize();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+
+         alogin=new AdminLoginPage(driver);
+
+//         ahomepage=new AdminHomepage(driver);
+//
+//         approverHomepage=new ApproverHomepage(driver);
+//
+//         approverLoginPage = new ApproverLoginPage(driver);
+//
+//         approverTrainingPlanPage = new ApproverTrainingPlanPage(driver);
+//
+//         user1Homepage = new User1Homepage(driver);
+//
+//         user1LoginPage = new User1LoginPage(driver);
+//
+//         user1TPPag = new User1TPPag(driver);
+//
+//         userHomepage = new UserHomepage(driver);
+//
+//         user2loginPage = new User2loginPage(driver);
+//
+//         user2TPPag = new User2TPPag(driver);
+//
+//         caseDetailsPage = new CaseDetailsPage(driver);
+//
+//         caseListPage = new CaseListPage(driver);
+//
+//         dashboardPage = new DashboardPage(driver);
+//
+//         plantPage = new PlantPage(driver);
+//
+//         departmentPage = new DepartmentPage(driver);
+//
+//         plantDepartmentmappingPage = new PlantDepartmentmappingPage(driver);
+//
+//         userMasterApge = new UserMasterApge(driver);
+//
+//         approvalMatrixPage = new ApprovalMatrixPage(driver);
+    }
+
+    @AfterMethod
+    public void teardown() throws InterruptedException {
+
+        if(driver!=null){
+            Thread.sleep(2000);
+            driver.close();
+        }
+    }
+}
