@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
-public class basetest {
+public class Basetest {
 
     protected PlantPage plantPage;
     protected DepartmentPage departmentPage;
@@ -57,7 +57,7 @@ public class basetest {
 
          alogin=new AdminLoginPage(driver);
 
-//         ahomepage=new AdminHomepage(driver);
+         ahomepage=new AdminHomepage(driver);
 //
 //         approverHomepage=new ApproverHomepage(driver);
 //
@@ -91,15 +91,15 @@ public class basetest {
 //
 //         userMasterApge = new UserMasterApge(driver);
 //
-//         approvalMatrixPage = new ApprovalMatrixPage(driver);
+         approvalMatrixPage = new ApprovalMatrixPage(driver);
     }
 
     @AfterMethod
     public void teardown() throws InterruptedException {
 
-        if(driver!=null){
-            Thread.sleep(2000);
-            driver.close();
-        }
+//        if(driver!=null){
+//            Thread.sleep(2000);
+//            driver.close();
+//        }
     }
 }
