@@ -45,8 +45,12 @@ public class AdminFinalPageTest extends Basetest {
 
     //Department Sceanrio
     @Test
-    public void departmentfunctionality(){
+    public void departmentfunctionality() throws InterruptedException {
 
+        Thread.sleep(500);
+        alogin.loginvalid("sp","sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
 
     }
     @DataProvider(name = "data")
