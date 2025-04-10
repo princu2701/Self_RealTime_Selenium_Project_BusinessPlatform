@@ -1,14 +1,23 @@
 package AdminAccess;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class AdminLoginPage {
 
+    WebDriverWait wait;
     WebDriver driver;
+
     public AdminLoginPage(WebDriver driver){
+
+        wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 
         this.driver=driver;
 
@@ -37,10 +46,12 @@ public class AdminLoginPage {
         return signinbutton;
     }
 
-    public void loginvalid(String usernames,String passwords){
+    public void loginvalid(String usernames,String passwords) throws InterruptedException {
 
         if (username.isDisplayed()){
 
+            wait.until(ExpectedConditions.visibilityOf(username));
+            Thread.sleep(2000);
             username.sendKeys(usernames);
             password.sendKeys(passwords);
         }

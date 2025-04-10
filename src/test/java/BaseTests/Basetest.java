@@ -1,18 +1,11 @@
+
 package BaseTests;
 
 import AdminAccess.*;
-import ApproverConrols.ApproverHomepage;
-import ApproverConrols.ApproverLoginPage;
-import ApproverConrols.ApproverTrainingPlanPage;
-import CommonPages.CaseDetailsPage;
-import CommonPages.CaseListPage;
-import CommonPages.DashboardPage;
-import UserControl.User2.User2TPPag;
-import UserControl.User2.User2loginPage;
-import UserControl.User2.UserHomepage;
-import UserControls.User1.User1Homepage;
-import UserControls.User1.User1LoginPage;
-import UserControls.User1.User1TPPag;
+import ApproverConrols.*;;
+import CommonPages.*;
+import UserControl.User2.*;
+import UserControls.User1.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -83,7 +76,7 @@ public class Basetest {
 //
 //         dashboardPage = new DashboardPage(driver);
 //
-//         plantPage = new PlantPage(driver);
+         plantPage = new PlantPage(driver);
 //
 //         departmentPage = new DepartmentPage(driver);
 //

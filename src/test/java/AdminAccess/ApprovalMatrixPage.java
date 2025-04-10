@@ -113,31 +113,34 @@ public class ApprovalMatrixPage {
 
         Thread.sleep(500);
 
-        Select select1 = new Select(inboxapprovertypeselection);
-
-        select1.selectByIndex(1);
-
-        Select select2 = new Select(inboxusernameselection);
-
-        select2.selectByIndex(2);
-
-        Select select3 = new Select(inboxplantnameselection);
-
-        select3.selectByIndex(1);
-
-        Select select4 = new Select(inboxdepartmentnameselection);
-
-        select4.selectByIndex(1);
-
-        Select select5 = new Select(inboxprocessflownmaeselection);
-
-        select5.selectByIndex(2);
-
+//        Select select1 = new Select(inboxapprovertypeselection);
+//
+//        select1.selectByIndex(1);
+//
+//        Select select2 = new Select(inboxusernameselection);
+//
+//        select2.selectByIndex(2);
+//
+//        Select select3 = new Select(inboxplantnameselection);
+//
+//        select3.selectByIndex(1);
+//
+//        Select select4 = new Select(inboxdepartmentnameselection);
+//
+//        select4.selectByIndex(1);
+//
+//        Select select5 = new Select(inboxprocessflownmaeselection);
+//
+//        select5.selectByIndex(2);
     }
 
     public void createapprovalmatrixdatawithoutapprovaltype(){
 
         CreatenewApprovalMatrixDataButton.click();
+
+        WebElement framebox=driver.findElement(By.cssSelector("[title='Approval Matrix Form']"));
+
+        driver.switchTo().frame(framebox);
 
         Select select4 = new Select(inboxusernameselection);
 
@@ -160,6 +163,10 @@ public class ApprovalMatrixPage {
 
         CreatenewApprovalMatrixDataButton.click();
 
+        WebElement framebox=driver.findElement(By.cssSelector("[title='Approval Matrix Form']"));
+
+        driver.switchTo().frame(framebox);
+
         Select select = new Select(inboxapprovertypeselection);
 
         select.selectByIndex(0);
@@ -181,6 +188,10 @@ public class ApprovalMatrixPage {
 
         CreatenewApprovalMatrixDataButton.click();
 
+        WebElement framebox=driver.findElement(By.cssSelector("[title='Approval Matrix Form']"));
+
+        driver.switchTo().frame(framebox);
+
         Select select = new Select(inboxapprovertypeselection);
 
         select.selectByIndex(0);
@@ -201,6 +212,10 @@ public class ApprovalMatrixPage {
     public void createapprovalmatrixdatawithoutdepartmentname(){
 
         CreatenewApprovalMatrixDataButton.click();
+
+        WebElement framebox=driver.findElement(By.cssSelector("[title='Approval Matrix Form']"));
+
+        driver.switchTo().frame(framebox);
 
         Select select = new Select(inboxapprovertypeselection);
 
