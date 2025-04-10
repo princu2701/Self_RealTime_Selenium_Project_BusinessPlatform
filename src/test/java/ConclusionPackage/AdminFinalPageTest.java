@@ -4,6 +4,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 public class AdminFinalPageTest extends Basetest {
 
+    //Approval Matrix Scenario
     @Test
     public void approvalmatrixtest() throws InterruptedException {
         alogin.loginvalid("sp", "sp"); // `alogin` is already initialized in basetest
@@ -15,6 +16,7 @@ public class AdminFinalPageTest extends Basetest {
 
     }
 
+    //Plant Scenario
     @Test(dataProvider = "data")
     public void plantfunctionalitytest(String keywords) throws InterruptedException {
         Thread.sleep(500);
@@ -26,21 +28,32 @@ public class AdminFinalPageTest extends Basetest {
         plantPage.createnewplantwithvaliddata(keywords);
     }
 
-    @Test(dataProvider = "data")
-    public void departmentfunctionalitytest(String keywords) throws InterruptedException {
+    //Plant Scenario
+    @Test
+    public void plantinvalidtests() throws InterruptedException {
+
         Thread.sleep(500);
         alogin.loginvalid("sp","sp");
         ahomepage.sidebaropen();
         ahomepage.adminpaneloption();
+        plantPage.plantbutton();
+        plantPage.plantboxopeningbutton();
+        plantPage.plantnamewithinvaliddata("!@)#()!)@#_");
+        plantPage.createplantwithoutenteringplantname();
 
     }
 
+    //Department Sceanrio
+    @Test
+    public void departemtfunctionality(){
 
+
+    }
     @DataProvider(name = "data")
     public Object[][] data(){
 
         return new Object[][]{
-                {"ssss"},{"dicx"},{"ds"}
+                {"csc"},{"xcdscd"},{"scd"}
         };
     }
 }
