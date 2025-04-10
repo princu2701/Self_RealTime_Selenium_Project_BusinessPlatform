@@ -45,7 +45,7 @@ public class AdminFinalPageTest extends Basetest {
 
     //Department Sceanrio
     @Test
-    public void departemtfunctionality(){
+    public void departmentfunctionality(){
 
 
     }
