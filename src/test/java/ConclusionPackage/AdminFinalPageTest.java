@@ -18,7 +18,7 @@ public class AdminFinalPageTest extends Basetest {
 
     //Plant Scenario
     @Test(dataProvider = "data")
-    public void plantfunctionalitytest(String keywords) throws InterruptedException {
+    public void plantscenario1(String keywords) throws InterruptedException {
         Thread.sleep(500);
         alogin.loginvalid("sp","sp");
         ahomepage.sidebaropen();
@@ -30,7 +30,7 @@ public class AdminFinalPageTest extends Basetest {
 
     //Plant Scenario
     @Test
-    public void plantinvalidtests() throws InterruptedException {
+    public void plantscenario2() throws InterruptedException {
 
         Thread.sleep(500);
         alogin.loginvalid("sp","sp");
@@ -43,9 +43,58 @@ public class AdminFinalPageTest extends Basetest {
 
     }
 
-    //Department Sceanrio
+    //Department Scenario
     @Test
-    public void departmentfunctionality() throws InterruptedException {
+    public void departmentscenario1() throws InterruptedException {
+
+        Thread.sleep(500);
+        alogin.loginvalid("sp","sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
+    }
+
+    @Test
+    public void departmentscenario2() throws InterruptedException {
+
+        Thread.sleep(500);
+        alogin.loginvalid("sp","sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
+
+
+    }
+
+    @Test
+    public void PlantDepartmentMappingSceanrio1() throws InterruptedException {
+
+        Thread.sleep(500);
+        alogin.loginvalid("sp","sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
+
+    }
+
+    @Test
+    public void PlantDepartmentMappingScenario2() throws InterruptedException {
+
+        Thread.sleep(500);
+        alogin.loginvalid("sp","sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
+
+    }
+
+    @Test
+    public void UsermasterPageScenario1() throws InterruptedException {
+
+        Thread.sleep(500);
+        alogin.loginvalid("sp","sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
+
+    }
+
+    public void UsermasterPageScenario2() throws InterruptedException {
 
         Thread.sleep(500);
         alogin.loginvalid("sp","sp");
@@ -57,7 +106,8 @@ public class AdminFinalPageTest extends Basetest {
     public Object[][] data(){
 
         return new Object[][]{
-                {"csc"},{"xcdscd"},{"scd"}
+                {"csd"},{"xcv"},{"scdscd"},
+                {"csc"},{"xcdscd"},{"scd"},
         };
     }
 }

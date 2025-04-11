@@ -51,6 +51,7 @@ public class AdminLoginPage {
         if (username.isDisplayed()){
 
             wait.until(ExpectedConditions.visibilityOf(username));
+
             Thread.sleep(2000);
             username.sendKeys(usernames);
             password.sendKeys(passwords);
