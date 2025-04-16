@@ -62,6 +62,7 @@ public class AdminHomepage {
 
     public void sidebaropen(){
 
+
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sidebarbutton)).click();
 

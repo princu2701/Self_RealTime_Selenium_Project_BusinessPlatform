@@ -2,7 +2,7 @@
 package BaseTests;
 
 import AdminAccess.*;
-import ApproverConrols.*;
+import ApproverConrols.*;;
 import CommonPages.*;
 import UserControl.User2.*;
 import UserControls.User1.*;
@@ -14,7 +14,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import java.io.IOException;
 import java.time.Duration;
-
 public class Basetest {
 
     protected PlantPage plantPage;
@@ -40,9 +39,9 @@ public class Basetest {
     protected WebDriverWait wait;
 
     @BeforeMethod
-    public void setup() {
+    public void setup(){
 
-        driver = new ChromeDriver();
+        driver=new ChromeDriver();
 
         driver.get("http://172.16.30.59:8080/ords/f?p=172:LOGIN:4323551477942:::::");
 
@@ -50,53 +49,53 @@ public class Basetest {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
-        alogin = new AdminLoginPage(driver);
+         alogin=new AdminLoginPage(driver);
 
-        ahomepage = new AdminHomepage(driver);
-        //
-        // approverHomepage=new ApproverHomepage(driver);
-        //
-        // approverLoginPage = new ApproverLoginPage(driver);
-        //
-        // approverTrainingPlanPage = new ApproverTrainingPlanPage(driver);
-        //
-        // user1Homepage = new User1Homepage(driver);
-        //
-        // user1LoginPage = new User1LoginPage(driver);
-        //
-        // user1TPPag = new User1TPPag(driver);
-        //
-        // userHomepage = new UserHomepage(driver);
-        //
-        // user2loginPage = new User2loginPage(driver);
-        //
-        // user2TPPag = new User2TPPag(driver);
-        //
-        // caseDetailsPage = new CaseDetailsPage(driver);
-        //
-        // caseListPage = new CaseListPage(driver);
-        //
-        // dashboardPage = new DashboardPage(driver);
-        //
-        plantPage = new PlantPage(driver);
-        //
-        departmentPage = new DepartmentPage(driver);
-        //
-        // plantDepartmentmappingPage = new PlantDepartmentmappingPage(driver);
-        //
-        // userMasterApge = new UserMasterApge(driver);
-        //
-        approvalMatrixPage = new ApprovalMatrixPage(driver);
+         ahomepage=new AdminHomepage(driver);
+//
+//         approverHomepage=new ApproverHomepage(driver);
+//
+//         approverLoginPage = new ApproverLoginPage(driver);
+//
+//         approverTrainingPlanPage = new ApproverTrainingPlanPage(driver);
+//
+//         user1Homepage = new User1Homepage(driver);
+//
+//         user1LoginPage = new User1LoginPage(driver);
+//
+//         user1TPPag = new User1TPPag(driver);
+//
+//         userHomepage = new UserHomepage(driver);
+//
+//         user2loginPage = new User2loginPage(driver);
+//
+//         user2TPPag = new User2TPPag(driver);
+//
+//         caseDetailsPage = new CaseDetailsPage(driver);
+//
+//         caseListPage = new CaseListPage(driver);
+//
+//         dashboardPage = new DashboardPage(driver);
+//
+         plantPage = new PlantPage(driver);
+//
+         departmentPage = new DepartmentPage(driver);
+//
+//         plantDepartmentmappingPage = new PlantDepartmentmappingPage(driver);
+//
+//         userMasterApge = new UserMasterApge(driver);
+//
+         approvalMatrixPage = new ApprovalMatrixPage(driver);
     }
 
     @AfterMethod
     public void teardown() throws InterruptedException {
 
-        if (driver != null) {
-            Thread.sleep(2000);
-            driver.close();
-        }
+//        if(driver!=null){
+//            Thread.sleep(2000);
+//            driver.close();
+//        }
     }
 }
