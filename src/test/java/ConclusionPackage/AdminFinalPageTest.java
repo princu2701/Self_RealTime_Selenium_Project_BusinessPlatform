@@ -8,21 +8,16 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import AdminAccess.PlantDepartmentmappingPage;
+
 public class AdminFinalPageTest extends Basetest {
-
-    @BeforeSuite
-    public void bs() throws InterruptedException {
-
-        System.out.println("Driver Activity Opened");
-
-    }
 
     // Approval Matrix Scenario
     @Test
     public void approvalmatrixtest() throws InterruptedException {
 
         Thread.sleep(500);
-        alogin.loginvalid("sp", "sp"); // `alogin` is already initialized in basetest
+        alogin.loginvalid("sp", "sp"); // `login` is already initialized in basetest
         ahomepage.sidebaropen();
         ahomepage.adminpaneloption();
         approvalMatrixPage.approvalMatrixbutton();
@@ -79,6 +74,14 @@ public class AdminFinalPageTest extends Basetest {
         alogin.loginvalid("sp", "sp");
         ahomepage.sidebaropen();
         ahomepage.adminpaneloption();
+        plantDepartmentmappingPage.plantdepartmentadminbutton();
+        plantDepartmentmappingPage.plantdepartmenthomecreatebutton();
+        plantDepartmentmappingPage.proceedwithdepartmentnameonly();
+        plantDepartmentmappingPage.inboxcreatebuttonforplant();
+        Thread.sleep(500);
+        alogin.loginvalid("sp", "sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
         departmentPage.viewdata1();
         departmentPage.viewdata2();
 
@@ -91,37 +94,45 @@ public class AdminFinalPageTest extends Basetest {
         alogin.loginvalid("sp", "sp");
         ahomepage.sidebaropen();
         ahomepage.adminpaneloption();
+        plantDepartmentmappingPage.plantdepartmentadminbutton();
+        plantDepartmentmappingPage.plantdepartmenthomecreatebutton();
+    }
+
+    @Test
+    public void PlantDepartmentMappingScenario2() throws InterruptedException {
+
+        Thread.sleep(500);
+        alogin.loginvalid("sp", "sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
+        plantDepartmentmappingPage.plantdepartmentadminbutton();
+        plantDepartmentmappingPage.plantdepartmenthomecreatebutton();
+        plantDepartmentmappingPage.proceedwithplantnameonly();
 
     }
 
-    // @Test
-    // public void PlantDepartmentMappingScenario2() throws InterruptedException {
-    //
-    // Thread.sleep(500);
-    // alogin.loginvalid("sp","sp");
-    // ahomepage.sidebaropen();
-    // ahomepage.adminpaneloption();
-    //
-    // }
-    //
-    // @Test
-    // public void UsermasterPageScenario1() throws InterruptedException {
-    //
-    // Thread.sleep(500);
-    // alogin.loginvalid("sp","sp");
-    // ahomepage.sidebaropen();
-    // ahomepage.adminpaneloption();
-    //
-    // }
-    //
-    // public void UsermasterPageScenario2() throws InterruptedException {
-    //
-    // Thread.sleep(500);
-    // alogin.loginvalid("sp","sp");
-    // ahomepage.sidebaropen();
-    // ahomepage.adminpaneloption();
-    //
-    // }
+    @Test
+    public void UsermasterPageScenario1() throws InterruptedException {
+
+        Thread.sleep(500);
+        alogin.loginvalid("sp", "sp");
+        ahomepage.sidebaropen();
+        ahomepage.adminpaneloption();
+        userMasterApge.usermasteradminbutton();
+        userMasterApge.searchboxvalidandinvalidentries();
+
+    }
+
+     public void UsermasterPageScenario2() throws InterruptedException {
+
+     Thread.sleep(500);
+     alogin.loginvalid("sp","sp");
+     ahomepage.sidebaropen();
+     ahomepage.adminpaneloption();
+     userMasterApge.usermasteradminbutton();
+     userMasterApge.createboxinternaldatanamesvalidentries();
+
+     }
     // @DataProvider(name = "data")
     // public Object[][] data(){
     //
@@ -130,8 +141,4 @@ public class AdminFinalPageTest extends Basetest {
     // {"csc"},{"xcdscd"},{"scd"},
     // };
     // }
-    @AfterSuite
-    public void done() {
-        System.out.println("Defined Scenarios Executed");
-    }
 }

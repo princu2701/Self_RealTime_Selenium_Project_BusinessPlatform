@@ -2,19 +2,21 @@
 package BaseTests;
 
 import AdminAccess.*;
+import Approver.User2TPPag;
+import Approver.User2loginPage;
+import Approver.UserHomepage;
 import ApproverConrols.*;
 import CommonPages.*;
-import UserControl.User2.*;
-import UserControls.User1.*;
+import PreparerTrainer.User1Homepage;
+import PreparerTrainer.User1LoginPage;
+import PreparerTrainer.User1TPPag;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import java.io.IOException;
-import java.time.Duration;
 
+import java.time.Duration;
 public class Basetest {
 
     protected PlantPage plantPage;
@@ -42,7 +44,9 @@ public class Basetest {
     @BeforeMethod
     public void setup() {
 
-        driver = new ChromeDriver();
+        System.out.println("==== SETUP: Browser is launching ====");
+
+        driver = new EdgeDriver();
 
         driver.get("http://172.16.30.59:8080/ords/f?p=172:LOGIN:4323551477942:::::");
 
@@ -79,14 +83,14 @@ public class Basetest {
         // caseListPage = new CaseListPage(driver);
         //
         // dashboardPage = new DashboardPage(driver);
-        //
+
         plantPage = new PlantPage(driver);
-        //
+
         departmentPage = new DepartmentPage(driver);
-        //
-        // plantDepartmentmappingPage = new PlantDepartmentmappingPage(driver);
-        //
-        // userMasterApge = new UserMasterApge(driver);
+
+        plantDepartmentmappingPage = new PlantDepartmentmappingPage(driver);
+
+         userMasterApge = new UserMasterApge(driver);
         //
         approvalMatrixPage = new ApprovalMatrixPage(driver);
     }
@@ -96,7 +100,8 @@ public class Basetest {
 
         if (driver != null) {
             Thread.sleep(2000);
-            driver.close();
+            driver.quit(); // ✅ closes all windows and kills chromedriver.exe
         }
+
     }
 }

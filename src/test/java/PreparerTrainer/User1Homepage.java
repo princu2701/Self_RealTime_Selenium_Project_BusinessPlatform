@@ -1,4 +1,4 @@
-package UserControls.User1;
+package PreparerTrainer;
 
 public class User1Homepage {
 }
