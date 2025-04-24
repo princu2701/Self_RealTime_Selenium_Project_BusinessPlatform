@@ -7,11 +7,13 @@ import Approver.User2loginPage;
 import Approver.UserHomepage;
 import ApproverConrols.*;
 import CommonPages.*;
+import ConclusionPackages.TrainingPlansFlowTesting;
+import OriginAccountCreator.pageclass;
 import PreparerTrainer.User1Homepage;
 import PreparerTrainer.User1LoginPage;
-import PreparerTrainer.User1TPPag;
+import TrainingPlanPages.TrainingPlanPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -19,6 +21,7 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 public class Basetest {
 
+    protected TrainingPlansFlowTesting realtimeFlowTestPage;
     protected PlantPage plantPage;
     protected DepartmentPage departmentPage;
     protected PlantDepartmentmappingPage plantDepartmentmappingPage;
@@ -34,19 +37,20 @@ public class Basetest {
     protected ApproverTrainingPlanPage approverTrainingPlanPage;
     protected User1Homepage user1Homepage;
     protected User1LoginPage user1LoginPage;
-    protected User1TPPag user1TPPag;
     protected UserHomepage userHomepage;
     protected User2loginPage user2loginPage;
     protected User2TPPag user2TPPag;
     protected WebDriver driver;
     protected WebDriverWait wait;
+    protected TrainingPlanPage trainingPlanPage;
+    protected pageclass pclass;
 
     @BeforeMethod
     public void setup() {
 
         System.out.println("==== SETUP: Browser is launching ====");
 
-        driver = new EdgeDriver();
+        driver = new FirefoxDriver();
 
         driver.get("http://172.16.30.59:8080/ords/f?p=172:LOGIN:4323551477942:::::");
 
@@ -59,6 +63,8 @@ public class Basetest {
         alogin = new AdminLoginPage(driver);
 
         ahomepage = new AdminHomepage(driver);
+
+
         //
         // approverHomepage=new ApproverHomepage(driver);
         //
@@ -70,7 +76,6 @@ public class Basetest {
         //
         // user1LoginPage = new User1LoginPage(driver);
         //
-        // user1TPPag = new User1TPPag(driver);
         //
         // userHomepage = new UserHomepage(driver);
         //
@@ -84,6 +89,7 @@ public class Basetest {
         //
         // dashboardPage = new DashboardPage(driver);
 
+         trainingPlanPage = new TrainingPlanPage(driver);
         plantPage = new PlantPage(driver);
 
         departmentPage = new DepartmentPage(driver);
@@ -91,7 +97,7 @@ public class Basetest {
         plantDepartmentmappingPage = new PlantDepartmentmappingPage(driver);
 
          userMasterApge = new UserMasterApge(driver);
-        //
+
         approvalMatrixPage = new ApprovalMatrixPage(driver);
     }
 
@@ -99,7 +105,7 @@ public class Basetest {
     public void teardown() throws InterruptedException {
 
         if (driver != null) {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             driver.quit(); // ✅ closes all windows and kills chromedriver.exe
         }
 

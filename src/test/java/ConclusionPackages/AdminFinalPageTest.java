@@ -1,14 +1,7 @@
-package ConclusionPackage;
+package ConclusionPackages;
 
 import BaseTests.Basetest;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import AdminAccess.PlantDepartmentmappingPage;
 
 public class AdminFinalPageTest extends Basetest {
 
