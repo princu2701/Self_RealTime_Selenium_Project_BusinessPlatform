@@ -1,5 +1,6 @@
-package AdminAccess;
+package CommonPage_Package;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,11 +10,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class AdminHomepage {
+public class Homepage {
 
+    WebDriverWait wait;
      WebDriver driver;
-    public AdminHomepage(WebDriver driver) {
+    public Homepage(WebDriver driver) {
 
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
@@ -70,8 +73,8 @@ public class AdminHomepage {
 
     public void adminpaneloption(){
 
+        wait.until(ExpectedConditions.visibilityOf(AdminPanelbutton));
         AdminPanelbutton.click();
-
     }
 
     public void processflowotion(){

@@ -1,27 +1,25 @@
 
 package BaseTests;
 
-import AdminAccess.*;
-import Approver.User2TPPag;
-import Approver.User2loginPage;
-import Approver.UserHomepage;
-import ApproverConrols.*;
-import CommonPages.*;
-import ConclusionPackages.TrainingPlansFlowTesting;
-import OriginAccountCreator.pageclass;
-import PreparerTrainer.User1Homepage;
-import PreparerTrainer.User1LoginPage;
+import Admin_Preparer_Trainer_Package.*;
+import ApproverModule_Pages.*;
+import CommonPage_Package.*;
+import ConclusionPackages.TrainingPlan_Page_FlowTesting;
 import TrainingPlanPages.TrainingPlanPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
-public class Basetest {
+import java.util.HashMap;
+import java.util.Map;
 
-    protected TrainingPlansFlowTesting realtimeFlowTestPage;
+public class Basetest_1 {
+
+    protected TrainingPlan_Page_FlowTesting realtimeFlowTestPage;
     protected PlantPage plantPage;
     protected DepartmentPage departmentPage;
     protected PlantDepartmentmappingPage plantDepartmentmappingPage;
@@ -30,27 +28,30 @@ public class Basetest {
     protected CaseDetailsPage caseDetailsPage;
     protected CaseListPage caseListPage;
     protected DashboardPage dashboardPage;
-    protected AdminLoginPage alogin;
-    protected AdminHomepage ahomepage;
+    protected LoginPage alogin;
+    protected Homepage ahomepage;
     protected ApproverHomepage approverHomepage;
-    protected ApproverLoginPage approverLoginPage;
     protected ApproverTrainingPlanPage approverTrainingPlanPage;
-    protected User1Homepage user1Homepage;
-    protected User1LoginPage user1LoginPage;
-    protected UserHomepage userHomepage;
-    protected User2loginPage user2loginPage;
-    protected User2TPPag user2TPPag;
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected TrainingPlanPage trainingPlanPage;
-    protected pageclass pclass;
 
     @BeforeMethod
     public void setup() {
 
         System.out.println("==== SETUP: Browser is launching ====");
 
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+
+        Map<String, Object> prefs = new HashMap<String, Object>();
+        prefs.put("credentials_enable_service", false);
+        prefs.put("profile.password_manager_enabled", false);
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+        prefs.put("autofill.profile_enabled", false);
+        prefs.put("autofill.credit_card_enabled", false);
+        prefs.put("password_manager_enabled", false);
+        ChromeOptions  options = new ChromeOptions();
+        options.setExperimentalOption("prefs", prefs);
 
         driver.get("http://172.16.30.59:8080/ords/f?p=172:LOGIN:4323551477942:::::");
 
@@ -60,12 +61,10 @@ public class Basetest {
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        alogin = new AdminLoginPage(driver);
+        alogin = new LoginPage(driver);
 
-        ahomepage = new AdminHomepage(driver);
-
-
-        //
+        ahomepage = new Homepage(driver);
+        /*
         // approverHomepage=new ApproverHomepage(driver);
         //
         // approverLoginPage = new ApproverLoginPage(driver);
@@ -88,7 +87,7 @@ public class Basetest {
         // caseListPage = new CaseListPage(driver);
         //
         // dashboardPage = new DashboardPage(driver);
-
+*/
          trainingPlanPage = new TrainingPlanPage(driver);
         plantPage = new PlantPage(driver);
 
@@ -104,10 +103,10 @@ public class Basetest {
     @AfterMethod
     public void teardown() throws InterruptedException {
 
-        if (driver != null) {
-            Thread.sleep(5000);
-            driver.quit(); // ✅ closes all windows and kills chromedriver.exe
-        }
+//        if (driver != null) {
+//            Thread.sleep(5000);
+//            driver.quit(); // ✅ closes all windows and kills chromedriver.exe
+//        }
 
     }
 }

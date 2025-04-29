@@ -1,4 +1,4 @@
-package AdminAccess;
+package Admin_Preparer_Trainer_Package;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +44,9 @@ public class UserMasterApge {
 
     @FindBy(id="P10_USER_NAME")
     private WebElement usermastercreateboxusernamebox;
+
+    @FindBy(id="P10_EMAIL")
+    private WebElement usermastercreateboxemailbox;
 
     @FindBy(xpath = "//button[@id='B89638033759807714']")
     private WebElement inboxcreatebutton;
@@ -155,7 +158,7 @@ public class UserMasterApge {
     }
     public void withfirstnameonly(){
 
-        WebElement framebox = driver.findElement(By.xpath("//iframe[@class='t-Dialog-iFrame']"));
+       WebElement framebox = driver.findElement(By.xpath("//iframe[@class='t-Dialog-iFrame']"));
         driver.switchTo().frame(framebox);
 
         usermastercreatebutton.click();
@@ -247,6 +250,17 @@ public class UserMasterApge {
         inboxcreatebutton.click();
 
 //        driver.switchTo().defaultContent();
+
+    }
+
+    public void flowtestingdata() throws InterruptedException {
+
+        Thread.sleep(1000);
+        usermastercreateboxfirstnamebox.sendKeys("test1");
+        usermastercreateboxlastnamebox.sendKeys("test2");
+        usermastercreateboxusernamebox.sendKeys("selenium");
+        usermastercreateboxpasswordbox.sendKeys("selenium");
+
 
     }
 

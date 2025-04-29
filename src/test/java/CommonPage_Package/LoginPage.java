@@ -1,6 +1,5 @@
-package AdminAccess;
+package CommonPage_Package;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,12 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class AdminLoginPage {
+public class LoginPage {
 
     WebDriverWait wait;
     WebDriver driver;
 
-    public AdminLoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver){
 
         wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 

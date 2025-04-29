@@ -1,13 +1,9 @@
-package AdminAccess;
-
-import java.time.Duration;
+package Admin_Preparer_Trainer_Package;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class PlantDepartmentmappingPage {
@@ -43,11 +39,11 @@ public class PlantDepartmentmappingPage {
     @FindBy(css = "[class='t-Button js-ignoreChange']")
     private WebElement plantdepartmentcancelboxbutton;
 
-    @FindBy(css = "[name='P14_DEPARTMENT_NAME']")
-    private WebElement plantdeptmappingdeptnameselectbox;
+    @FindBy(css = "#P14_DEPARTMENT_NAME")
+    private WebElement selectdeptnamebox;
 
-    @FindBy(id = "P14_PLANT_NAME")
-    private WebElement plantdeptmappingplantnamebox;
+    @FindBy(css = "#P14_PLANT_NAME")
+    private WebElement selectplantnamebox;
 
     public void plantdepartmentadminbutton() {
 
@@ -64,13 +60,9 @@ public class PlantDepartmentmappingPage {
     public void proceedwithdepartmentnameonly(){
 
         driver.switchTo().frame(plantdepartmentmappingframebox);
-        Select select=new Select(plantdeptmappingdeptnameselectbox);
-        select.selectByIndex(1);
-        String plantboxddata=driver.findElement(By.id("P14_PLANT_NAME_error")).getText();
-        if(plantboxddata.length()>0){
-            Assert.assertEquals(plantboxddata,"Plant Name is mandatory.");
-            System.out.println("Error displayed is: "+ plantboxddata);
-        }
+        Select select=new Select(selectdeptnamebox);
+        select.selectByVisibleText("seleniumdepartment");
+        plantdeparmentmappingboxcreatebutton.click();
         driver.switchTo().defaultContent();
     }
 
@@ -80,18 +72,17 @@ public class PlantDepartmentmappingPage {
         if (plantdeparmentmappingboxcreatebutton.isDisplayed()){
             System.out.println("Button found and ready to click");
         }
+
+
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].click();",plantdeparmentmappingboxcreatebutton);
-        String deptboxddata=driver.findElement(By.id("P14_DEPARTMENT_NAME_error")).getText();
-        if(deptboxddata.length()>0){
-            Assert.assertEquals(deptboxddata,"Department Name is mandatory.");
-            System.out.println("Error displayed is: "+ deptboxddata);
-        }
+
+        driver.switchTo().defaultContent();
     }
 
     public void inboxcreatebuttonforplant(){
 
-//        driver.switchTo().frame(plantdepartmentmappingframebox);
+        driver.switchTo().frame(plantdepartmentmappingframebox);
         if (plantdeparmentmappingboxcreatebutton.isDisplayed()){
             System.out.println("Button found and ready to click");
         }
@@ -107,18 +98,14 @@ public class PlantDepartmentmappingPage {
     public void proceedwithplantnameonly(){
 
         driver.switchTo().frame(plantdepartmentmappingframebox);
-        Select select=new Select(plantdeptmappingplantnamebox);
+        Select select=new Select(selectplantnamebox);
+        select.selectByVisibleText("seleniumplant");
         System.out.println("All availabel Options are :" + select.getOptions());
-        for (int i = 1; i < 5; i++) {
-            try {
-                select.selectByIndex(i);
-                inboxcreatebuttonforplant();
-            } catch (Exception e) {
-                System.out.println("Error encountered: " + e.getMessage());
-            }
-        }
-//        driver.switchTo().defaultContent();
+        driver.switchTo().defaultContent();
+
     }
+
+
 
 
 

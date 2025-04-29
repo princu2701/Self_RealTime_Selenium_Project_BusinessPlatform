@@ -1,4 +1,4 @@
-package AdminAccess;
+package Admin_Preparer_Trainer_Package;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

@@ -1,9 +1,9 @@
 package ConclusionPackages;
 
-import BaseTests.Basetest;
+import BaseTests.Basetest_1;
 import org.testng.annotations.Test;
 
-public class AdminFinalPageTest extends Basetest {
+public class Admin_AlllPagesTest extends Basetest_1 {
 
     // Approval Matrix Scenario
     @Test

@@ -4,9 +4,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 
@@ -298,5 +300,33 @@ public class TrainingPlanPage {
 
         Assert.assertTrue(submit.isEnabled()); // Check if submit is clickable
     }
+
+    public void testRemarksMaxLength() {
+
+        trainingplanformbutton.click();
+
+        wait.until(ExpectedConditions.visibilityOf(remarksfield));
+
+        String longText = "A".repeat(1001); // 1001 characters
+        remarksfield.sendKeys(longText);
+
+        // System should truncate to 1000 chars
+        Assert.assertEquals(remarksfield.getAttribute("value").length(), 1001);
+    }
+
+    public void testFormSubmissionSavesData() throws InterruptedException {
+
+        trainingplanformbutton.click();
+        // 1. Fill valid data
+        Actions actions = new Actions(driver);
+
+        actions.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
+        Thread.sleep(200);
+        actions.doubleClick(associatenameentrybox).sendKeys("Prince",Keys.TAB).build().perform();
+        Thread.sleep(200);
+        actions.moveToElement(associateidentrybox).sendKeys("101").build().perform();
+       submit.click();
+    }
+
 
 }

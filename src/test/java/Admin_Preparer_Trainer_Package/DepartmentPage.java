@@ -1,6 +1,7 @@
-package AdminAccess;
+package Admin_Preparer_Trainer_Package;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -137,6 +138,20 @@ public class DepartmentPage {
       // Switch back to the main content before clicking the next button
       driver.switchTo().defaultContent();
     }
+  }
+
+  public void senddatawithenteringvalue(String DepartmentName) throws InterruptedException {
+
+    JavascriptExecutor jsExecutor= (JavascriptExecutor) driver;
+    jsExecutor.executeScript("arguments[0].click();",Departmentadminpanelbutton);
+    Thread.sleep(500);
+    jsExecutor.executeScript("arguments[0].click();",createdepartmentdataboxbutton);
+    WebElement framebox = driver.findElement(By.cssSelector("[title='Department Mdm Form']"));
+    driver.switchTo().frame(framebox);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    wait.until(ExpectedConditions.elementToBeClickable(okbuttondepartmentdatabutton));
+    dataentrydeparmentbox.sendKeys(DepartmentName);
+    okbuttondepartmentdatabutton.click();
   }
 
 }
