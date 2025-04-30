@@ -8,15 +8,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TrainingPlanPage {
+public class TrainingPlanPagePrepTrainer {
 
     WebDriver driver;
     WebDriverWait wait;
-    public TrainingPlanPage(WebDriver driver) {
+    public TrainingPlanPagePrepTrainer(WebDriver driver) {
 
         this.driver=driver;
         PageFactory.initElements(driver,this);
@@ -195,7 +194,7 @@ public class TrainingPlanPage {
         Thread.sleep(200);
         action.moveToElement(asscoiateslastcolumnbox).sendKeys("1").build().perform();
         remarksfield.sendKeys("CASE GENERATION IS SUCCESS FROM PREPARER");
-        submit.click();
+//        submit.click();
 
     }
 
@@ -236,7 +235,7 @@ public class TrainingPlanPage {
         Thread.sleep(200);
         action.moveToElement(asscoiateslastcolumnbox).sendKeys("1").build().perform();
         remarksfield.sendKeys("CASE GENERATION IS SUCCESS FROM PREPARER");
-        submit.click();
+//        submit.click();
 
         Assert.assertFalse(Boolean.parseBoolean("prince"), "Data is not visible"); // Verify input
         Assert.assertTrue(submit.isEnabled()); // Check if submit is clickable
@@ -296,7 +295,7 @@ public class TrainingPlanPage {
         Thread.sleep(200);
         action.moveToElement(asscoiateslastcolumnbox).sendKeys("1").build().perform();
         remarksfield.sendKeys("CASE GENERATION IS SUCCESS FROM PREPARER");
-        submit.click();
+//        submit.click();
 
         Assert.assertTrue(submit.isEnabled()); // Check if submit is clickable
     }

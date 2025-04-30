@@ -1,21 +1,21 @@
 No. | Scenario
-1 | Admin login with valid credentials - Done
-2 | Admin login with invalid credentials - Done
-3 | Admin creates a new user at Level 1 (Preparer/Trainer)
-4 | Admin creates a new Approver (Level 2 Approver)
-5 | Admin creates a new Checker (Level 3 Checker)
-6 | Admin creates a Plant and map it with departments
-7 | Admin creates an Approval Matrix correctly
-8 | Preparer/Trainer (User 1) logs in and creates a New Training Plan
-9 | Approver (User 2) views assigned plan and approves it
-10 | Approver (User 2) views assigned plan and rejects it
-11 | If Approver rejects, verify plan returns to Preparer for corrections
-12 | Preparer modifies plan and resubmits for approval
-13 | Checker (User 3) views final approved plan and gives final approval
-14 | Checker raises a query on the plan (optional query raising flow)
-15 | Admin views all cases in Dashboard (cases list visibility)
-16 | Search training plans by status: Pending, Approved, Rejected, Queried
-17 | Logout functionality for all roles (Admin, Approver, Checker)
-18 | Access control: Approver should not create plans (only view and approve)
-19 | Dashboard count verification: Plan counts are updated correctly after actions
-20 | Retry submitting same plan if first approval fails (resubmission flow)
+Admin login with valid credentials - Done
+Admin login with invalid credentials - Done
+Admin creates a new user at Level 1 (Preparer/Trainer)
+Admin creates a new Approver (Level 2 Approver)
+Admin creates a new Checker (Level 3 Checker)
+Admin creates a Plant and map it with departments
+Admin creates an Approval Matrix correctly
+Preparer/Trainer (User 1) logs in and creates a New Training Plan
+Approver (User 2) views assigned plan and approves it
+Approver (User 2) views assigned plan and rejects it
+If Approver rejects, verify plan returns to Preparer for corrections
+Preparer modifies plan and resubmits for approval
+Checker (User 3) views final approved plan and gives final approval
+Checker raises a query on the plan (optional query raising flow)
+Admin views all cases in Dashboard (cases list visibility)
+Search training plans by status: Pending, Approved, Rejected, Queried
+Logout functionality for all roles (Admin, Approver, Checker)
+Access control: Approver should not create plans (only view and approve)
+Dashboard count verification: Plan counts are updated correctly after actions
+Retry submitting same plan if first approval fails (resubmission flow)

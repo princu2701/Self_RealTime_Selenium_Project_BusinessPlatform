@@ -14,7 +14,6 @@ public class ApprovalMatrixPage {
     public ApprovalMatrixPage(WebDriver driver){
 
         this.driver=driver;
-
         PageFactory.initElements(driver,this);
 
     }
@@ -237,6 +236,144 @@ public class ApprovalMatrixPage {
     public void cancelnewapprvalmatrixdata(){
 
         inboxdatacancelbuttonselection.click();
+    }
+
+    public void approvalmatrix(){
+
+        approvalmatrixbutton.click();
+
+        CreatenewApprovalMatrixDataButton.click();
+
+        WebElement framebox=driver.findElement(By.cssSelector("[title='Approval Matrix Form']"));
+
+        driver.switchTo().frame(framebox);
+
+        Select approvaltype = new Select(inboxapprovertypeselection);
+
+        approvaltype.selectByIndex(1);
+
+        Select username = new Select(inboxusernameselection);
+
+        username.selectByVisibleText("selenium");
+
+        Select plantname = new Select(inboxplantnameselection);
+
+        plantname.selectByVisibleText("seleniumplant");
+
+        Select departmentname = new Select(inboxdepartmentnameselection);
+
+        departmentname.selectByVisibleText("seleniumdepartment");
+
+        Select processflowname = new Select(inboxprocessflownmaeselection);
+
+        processflowname.selectByVisibleText("Holder Fixing");
+
+        insideboxdatabcreatebutton.click();
+    }
+
+    /// ///////////////////////////////////////////////
+
+    public void approvalmatrixtrainercreator(){
+
+        approvalmatrixbutton.click();
+
+        CreatenewApprovalMatrixDataButton.click();
+
+        WebElement framebox=driver.findElement(By.cssSelector("[title='Approval Matrix Form']"));
+
+        driver.switchTo().frame(framebox);
+
+        Select approvaltype = new Select(inboxapprovertypeselection);
+
+        approvaltype.selectByVisibleText("Trainer");
+
+        Select username = new Select(inboxusernameselection);
+
+        username.selectByVisibleText("selenium");
+
+        Select plantname = new Select(inboxplantnameselection);
+
+        plantname.selectByVisibleText("seleniumplant");
+
+        Select departmentname = new Select(inboxdepartmentnameselection);
+
+        departmentname.selectByVisibleText("seleniumdepartment");
+
+        Select processflowname = new Select(inboxprocessflownmaeselection);
+
+        processflowname.selectByVisibleText("Holder Fixing");
+
+        insideboxdatabcreatebutton.click();
+    }
+
+    /// /////////////////////////
+
+    public void approvalmatrixcheckercreator(){
+
+        approvalmatrixbutton.click();
+
+        CreatenewApprovalMatrixDataButton.click();
+
+        WebElement framebox=driver.findElement(By.cssSelector("[title='Approval Matrix Form']"));
+
+        driver.switchTo().frame(framebox);
+
+        Select approvaltype = new Select(inboxapprovertypeselection);
+
+        approvaltype.selectByVisibleText("Checker");
+
+        Select username = new Select(inboxusernameselection);
+
+        username.selectByVisibleText("seleniumchecker");
+
+        Select plantname = new Select(inboxplantnameselection);
+
+        plantname.selectByVisibleText("seleniumplant");
+
+        Select departmentname = new Select(inboxdepartmentnameselection);
+
+        departmentname.selectByVisibleText("seleniumdepartment");
+
+        Select processflowname = new Select(inboxprocessflownmaeselection);
+
+        processflowname.selectByVisibleText("Holder Fixing");
+
+        insideboxdatabcreatebutton.click();
+    }
+
+    /// /////////////////////////
+
+    public void approvalmatrixapprovercreator(){
+
+        approvalmatrixbutton.click();
+
+        CreatenewApprovalMatrixDataButton.click();
+
+        WebElement framebox=driver.findElement(By.cssSelector("[title='Approval Matrix Form']"));
+
+        driver.switchTo().frame(framebox);
+
+        Select approvaltype = new Select(inboxapprovertypeselection);
+
+        approvaltype.selectByVisibleText("Approver");
+
+        Select username = new Select(inboxusernameselection);
+
+        username.selectByVisibleText("seleniumapprover");
+
+        Select plantname = new Select(inboxplantnameselection);
+
+        plantname.selectByVisibleText("seleniumplant");
+
+        Select departmentname = new Select(inboxdepartmentnameselection);
+
+        departmentname.selectByVisibleText("seleniumdepartment");
+
+        Select processflowname = new Select(inboxprocessflownmaeselection);
+
+        processflowname.selectByVisibleText("Holder Fixing");
+
+        insideboxdatabcreatebutton.click();
     }
 
 }
