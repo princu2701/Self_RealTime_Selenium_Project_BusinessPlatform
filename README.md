@@ -1,24 +1,47 @@
-# Skill Matrix
+# 💼 Skill Matrix – Selenium Automation Framework
 
-**Skill Matrix** is a company-internal web application designed to manage the training and approval process for different types of users across departments and plants. This automation testing framework is developed using Selenium WebDriver, TestNG, Maven, and follows the Page Object Model (POM) architecture.
+> 🚧 **Note:** This project is under active development and daily updates.  
+> 🧪 Automated by: **Sole QA (Me)** | 🧠 Ownership: End-to-End Testing
+
+## 📌 Project Overview
+
+**Skill Matrix** is an internal business platform used to manage role-based access, user creation, department mapping, and training flows. It allows Admins to define complex approval workflows involving four types of users — **Preparer**, **Checker**, **Approver**, and **Trainer** — to streamline organizational processes.
+
+This project automates the entire testing lifecycle using **Selenium**, **TestNG**, and the **Page Object Model (POM)** framework, with **Maven** for build management.
+
+---
+
+## 🧠 Modules Automated
+
+- 🔑 **Admin Login** with VPN
+- 🏭 **Plant & Department Creation**
+- 🔁 **Plant–Department Mapping**
+- 👥 **User Matrix** – Create users with roles & permissions
+- ✅ **Approval Matrix** – Configure process flows
+- 👨‍🏫 **Preparer** – Creates training flow
+- 👀 **Checker / Approver / Trainer** – Review or reject plans, raise queries
 
 ---
 
 ## 🧰 Tech Stack
 
-- **Automation Tool:** Selenium WebDriver  
-- **Framework:** TestNG  
-- **Build Tool:** Maven  
-- **Design Pattern:** Page Object Model (POM)  
-- **Language:** Java  
-- **IDE Used:** IntelliJ IDEA  
-- **Reporting:** (To be integrated post-testing completion)
+| Tech          | Details                                     |
+|---------------|---------------------------------------------|
+| Language      | Java                                        |
+| Framework     | Page Object Model (POM)                     |
+| Testing Tool  | Selenium WebDriver + TestNG                 |
+| Build Tool    | Maven                                       |
+| Reporting     | [Coming Soon] HTML/Extent Report Integration |
+| IDE           | IntelliJ IDEA                               |
+| Version Ctrl  | Git & GitHub                                |
+| Execution     | Local (via IntelliJ or `mvn test`)          |
+| VPN Required  | ✅ Yes (for internal environment)            |
 
 ---
 
 ## 📁 Project Structure
 
-The project follows the Page Object Model (POM) design pattern. Below is the folder-wise breakdown:
+The following is the organized POM-based folder structure:
 
 ```
 src/
@@ -64,61 +87,60 @@ src/
             └── Basetest_1.java
 ```
 
+---
 
-## 🧪 Testing Overview
+## 🚀 How to Run the Project
 
-As the sole tester for the project, I’ve implemented a structure to cover:
+### 📥 Clone the Repository
+```bash
+git clone https://github.com/princu2701/Self_RealTime_Selenium_Project_BusinessPlatform.git
+```
 
-- 🔸 **Smoke Testing**
-- 🔹 **Regression Testing**
-- 🔸 **Sanity Testing**
+### 🔗 Pre-requisites
+- VPN must be connected ✅  
+- Java (11 or above) installed  
+- Maven installed  
+- IntelliJ IDEA recommended  
 
-The automation scripts are modular and follow reusable methods for flexibility and scalability.
+### ▶️ Run Tests
+Open project in IntelliJ and run TestNG suite (`Basetest_1`)  
+Or use command line:
+```bash
+mvn clean test
+```
 
 ---
 
-## 🔐 User Flow
+## 📊 Testing Approach
 
-1. **Admin Login**
-   - Create Users
-   - Create Plants
-   - Create Departments
-   - Map Plants & Departments
-   - Setup User Matrix & Approval Matrix
+| Type        | Covered | Notes                                      |
+|-------------|---------|--------------------------------------------|
+| Smoke       | ✅       | For each module                            |
+| Regression  | ✅       | After changes or additions                 |
+| Sanity      | ✅       | Before deployment                          |
 
-2. **Role-Based Actions**
-   - **Preparer:** Creates training/process flows
-   - **Checker, Approver, Trainer:** Review submitted flows; can Accept, Reject, or Raise Queries
+🧪 As the **only QA**, I built and am maintaining the test scripts from scratch for **complete coverage** and **real-time execution**.
 
 ---
 
-## 🚀 How to Run
+## 🔗 Project Access
 
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/princu2701/Self_RealTime_Selenium_Project_BusinessPlatform.git
-   ```
-2. Ensure **VPN connection** is active (mandatory for accessing the internal app).
-3. Open the project in **IntelliJ IDEA**.
-4. Run the TestNG suite (e.g., `Basetest_1`) to start browser-based tests.
-5. Tests will automatically launch a Firefox browser and hit the defined internal URL:
-   ```
-   http://172.16.30.59:8080/ords/f?p=172:LOGIN:4323551477942::::::
-   ```
-
----
-
-## 👤 Author & Contribution
-
-- 👨‍💻 **Tester:** @princu2701  
-- I am the **only QA** on this project, responsible for:
-  - Designing the test framework from scratch
-  - Writing and maintaining scripts daily
-  - Planning & executing all types of testing phases
+- 🖥️ Internal URL: `http://172.16.30.59:8080/ords/f?p=...` *(VPN required)*
+- 📁 Repo Link: [GitHub – BusinessPlatform](https://github.com/princu2701/Self_RealTime_Selenium_Project_BusinessPlatform.git)
 
 ---
 
 ## 📌 Notes
 
-- Reporting (Extent Reports / Allure) will be configured once the testing phase is complete.
-- Screenshots and logs will be added in the final phase of the project.
+- Reporting functionality will be added once the test framework is fully stable.
+- This repository serves as a **real-time automation showcase** for enterprise-level modules.
+
+---
+
+## 🙋‍♂️ About Me
+
+I am the **sole QA engineer** working on this live company project — building everything from automation, framework setup, test case design to execution and reporting.
+
+> Thank you for visiting!  
+> 🔄 Project is being **actively updated daily** — stay tuned!
+
