@@ -39,6 +39,49 @@ public class Homepage {
     @FindBy(xpath = "(//*[.='Training Plan'])[3]")
     private WebElement TrainingPlanButton;
 
+    @FindBy(linkText = "Total Plan")
+    private WebElement TotalPlanViewDashboard;
+
+    @FindBy(linkText = "Approved Plan")
+    private WebElement ApprovedPlanViewDashboard;
+
+    @FindBy(linkText = "Rejected Plan")
+    private WebElement RejectedPlanViewDashboard;
+
+    @FindBy(linkText = "Query Raised")
+    private WebElement QueryRaisedViewDashboard;
+
+    @FindBy(linkText = "Training Complete")
+    private WebElement TrainingCompleteViewDashboard;
+
+    public WebElement getPendingForCheckedViewDashboard() {
+        return PendingForCheckedViewDashboard;
+    }
+
+    public WebElement getTrainingCompleteViewDashboard() {
+        return TrainingCompleteViewDashboard;
+    }
+
+    public WebElement getQueryRaisedViewDashboard() {
+        return QueryRaisedViewDashboard;
+    }
+
+    public WebElement getRejectedPlanViewDashboard() {
+        return RejectedPlanViewDashboard;
+    }
+
+    public WebElement getApprovedPlanViewDashboard() {
+        return ApprovedPlanViewDashboard;
+    }
+
+    public WebElement getTotalPlanViewDashboard() {
+        return TotalPlanViewDashboard;
+    }
+
+    @FindBy(linkText = "Pending For Checked")
+    private WebElement PendingForCheckedViewDashboard;
+
+
     public WebElement getSidebarbutton() {
         return sidebarbutton;
     }
@@ -86,5 +129,35 @@ public class Homepage {
 
         TrainingPlanButton.click();
 
+    }
+
+    public void totalplanviewdashboard(){
+
+        TotalPlanViewDashboard.click();
+    }
+
+    public void approvedplanviewdashboard(){
+
+        ApprovedPlanViewDashboard.click();
+    }
+
+    public void rejectedplanviewdashboard(){
+
+        RejectedPlanViewDashboard.click();
+    }
+
+    public void queryraisedviewdashboard(){
+
+        QueryRaisedViewDashboard.click();
+    }
+
+    public void trainingcompleteviewdashboard(){
+
+        TrainingCompleteViewDashboard.click();
+    }
+
+    public void pendingforcheckedviewdashboard(){
+
+        PendingForCheckedViewDashboard.click();
     }
 }

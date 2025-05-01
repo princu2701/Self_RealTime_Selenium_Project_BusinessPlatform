@@ -1,15 +1,11 @@
 package ConclusionPackages;
 
 import BaseTests.Basetest_1;
-import org.junit.experimental.theories.Theories;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import Admin_Preparer_Trainer_Package.UserMasterPage;
-public class FullFlow_Test extends Basetest_1{
+
+import static org.testng.Assert.assertEquals;
+
+public class UserCreationFlow_TestPage extends Basetest_1 {
 
     @Test(description = "Creation of PlantName",priority = 1,groups = "preparertrainercreator")
     public void fullflowtestingplantcreation() throws InterruptedException {
@@ -44,9 +40,9 @@ public class FullFlow_Test extends Basetest_1{
         System.out.println("2. Sidebaropened Successfully");
         Thread.sleep(2000);
         ahomepage.adminpaneloption();
-        System.out.println("3. Clicked Successfully on the PlantPage admin Panel Button");
+        System.out.println("3.Clicked Successfully on the PlantPage admin Panel Button");
         departmentPage.senddatawithenteringvalue("seleniumdepartment");
-        System.out.println("4. Departemnt Data created Successfully");
+        System.out.println("4.Department Data created Successfully");
         System.out.println("Process done till Department Page");
 
     }
@@ -189,22 +185,6 @@ public class FullFlow_Test extends Basetest_1{
         approvalMatrixPage.approvalmatrixapprovercreator();
 
     }
-
-    /*
-    Workflow with user roles strats from now on
-     */
-
-    @Test
-    public void workflow() throws InterruptedException {
-
-        Thread.sleep(500);
-        alogin.loginvalid("selenium", "selenium");
-        ahomepage.sidebaropen();
-        ahomepage.trainingplanbutton();
-        trainingPlanPage.straightflow();
-
-    }
-
 
 
 

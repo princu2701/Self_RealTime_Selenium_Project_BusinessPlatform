@@ -194,7 +194,7 @@ public class TrainingPlanPagePrepTrainer {
         Thread.sleep(200);
         action.moveToElement(asscoiateslastcolumnbox).sendKeys("1").build().perform();
         remarksfield.sendKeys("CASE GENERATION IS SUCCESS FROM PREPARER");
-//        submit.click();
+        submit.click();
 
     }
 

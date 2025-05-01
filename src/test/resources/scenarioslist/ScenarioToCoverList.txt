@@ -13,9 +13,9 @@ If Approver rejects, verify plan returns to Preparer for corrections
 Preparer modifies plan and resubmits for approval
 Checker (User 3) views final approved plan and gives final approval
 Checker raises a query on the plan (optional query raising flow)
-Admin views all cases in Dashboard (cases list visibility)
+Admin views all cases in dashboard (cases list visibility)
 Search training plans by status: Pending, Approved, Rejected, Queried
 Logout functionality for all roles (Admin, Approver, Checker)
 Access control: Approver should not create plans (only view and approve)
-Dashboard count verification: Plan counts are updated correctly after actions
+dashboard count verification: Plan counts are updated correctly after actions
 Retry submitting same plan if first approval fails (resubmission flow)

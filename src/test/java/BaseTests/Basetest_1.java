@@ -6,7 +6,10 @@ import ApproverModule_Pages.*;
 import CommonPage_Package.*;
 import ConclusionPackages.TrainingPlan_Page_FlowTesting;
 import TrainingPlanPages.TrainingPlanPagePrepTrainer;
+import dashboard.TotalPlanPage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -32,13 +35,14 @@ public class Basetest_1 {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected TrainingPlanPagePrepTrainer trainingPlanPage;
+    protected TotalPlanPage totalPlanPage;
 
     @BeforeMethod
     public void setup() {
 
         System.out.println("==== SETUP: Browser is launching ====");
 
-        driver = new FirefoxDriver();
+        driver = new EdgeDriver();
 
         driver.get("http://172.16.30.59:8080/ords/f?p=172:LOGIN:4323551477942:::::");
 
@@ -86,6 +90,8 @@ public class Basetest_1 {
          userMasterApge = new UserMasterPage(driver);
 
         approvalMatrixPage = new ApprovalMatrixPage(driver);
+
+        totalPlanPage = new TotalPlanPage(driver);
     }
 
     @AfterMethod
