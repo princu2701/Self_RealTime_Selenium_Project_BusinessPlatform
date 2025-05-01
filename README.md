@@ -18,49 +18,52 @@
 
 ## 📁 Project Structure
 
-The framework includes various modules and flows:
+The project follows the Page Object Model (POM) design pattern. Below is the folder-wise breakdown:
+
 ```
-Admin_Preparer_Trainer_Package/
-  ├── ApprovalMatrixPage
-  ├── CasePage
-  ├── DepartmentPage
-  ├── PlantDepartmentmappingPage
-  ├── PlantPage
-  ├── UserMasterPage
-
-ApproverModule_Pages/
-  ├── ApproverHomepage
-  ├── ApproverTrainingPlanPage
-  ├── CasePage
-
-Checker/
-  ├── CasePage
-  ├── User3HomePage
-  ├── User3TrainingPlanPage
-
-CommonPage_Package/
-  ├── CaseDetailsPage
-  ├── CaseListPage
-  ├── DashboardPage
-  ├── Homepage
-  ├── LoginPage
-
-ConclusionPackages/
-  ├── Admin_AllPagesTest
-  ├── FullFlow_Test
-  ├── TrainingPlan_Page_FlowTesting
-
-GlobalMethodstoUse/
-  ├── GlobalMethods
-
-FullFlow_Testing/
-  ├── FullFlowCreation
-
-BaseTests/
-  ├── Basetest_1
+src/
+└── test/
+    └── java/
+        ├── Admin_Preparer_Trainer_Package/
+        │   ├── ApprovalMatrixPage.java
+        │   ├── CasePage.java
+        │   ├── DepartmentPage.java
+        │   ├── PlantDepartmentmappingPage.java
+        │   ├── PlantPage.java
+        │   └── UserMasterPage.java
+        │
+        ├── ApproverModule_Pages/
+        │   ├── ApproverHomepage.java
+        │   ├── ApproverTrainingPlanPage.java
+        │   └── CasePage.java
+        │
+        ├── Checker/
+        │   ├── CasePage.java
+        │   ├── User3HomePage.java
+        │   └── User3TrainingPlanPage.java
+        │
+        ├── CommonPage_Package/
+        │   ├── CaseDetailsPage.java
+        │   ├── CaseListPage.java
+        │   ├── DashboardPage.java
+        │   ├── Homepage.java
+        │   ├── LoginPage.java
+        │
+        ├── ConclusionPackages/
+        │   ├── Admin_AllPagesTest.java
+        │   ├── FullFlow_Test.java
+        │   └── TrainingPlan_Page_FlowTesting.java
+        │
+        ├── GlobalMethodstoUse/
+        │   └── GlobalMethods.java
+        │
+        ├── FullFlow_Testing/
+        │   └── FullFlowCreation.java
+        │
+        └── BaseTests/
+            └── Basetest_1.java
 ```
 
----
 
 ## 🧪 Testing Overview
 
