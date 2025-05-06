@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name="ParallelTestSuite">
+    <test name="ParallelClassExecution">
+        <classes>
+            <class name="ConclusionPackages.UserRolesProcessFlow"/>
+            <methods>
+                <include name="workflowuser1"/>
+            </methods>
+<!--                        <class name="ConclusionPackages.UserCreationFlow_TestPage"/>-->
+<!---->
+        </classes>
+    </test>
+</suite>

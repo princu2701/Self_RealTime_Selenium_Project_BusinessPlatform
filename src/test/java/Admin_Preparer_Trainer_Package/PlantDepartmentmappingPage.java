@@ -61,7 +61,7 @@ public class PlantDepartmentmappingPage {
 
         driver.switchTo().frame(plantdepartmentmappingframebox);
         Select select=new Select(selectdeptnamebox);
-        select.selectByVisibleText("seleniumdepartment");
+        select.selectByVisibleText("automatedepartment");
         plantdeparmentmappingboxcreatebutton.click();
         driver.switchTo().defaultContent();
     }
@@ -99,7 +99,7 @@ public class PlantDepartmentmappingPage {
 
         driver.switchTo().frame(plantdepartmentmappingframebox);
         Select select=new Select(selectplantnamebox);
-        select.selectByVisibleText("seleniumplant");
+        select.selectByVisibleText("automateplant");
         System.out.println("All availabel Options are :" + select.getOptions());
         driver.switchTo().defaultContent();
 

@@ -1,11 +1,11 @@
 No. | Scenario
 Admin login with valid credentials - Done
 Admin login with invalid credentials - Done
-Admin creates a new user at Level 1 (Preparer/Trainer)
-Admin creates a new Approver (Level 2 Approver)
-Admin creates a new Checker (Level 3 Checker)
-Admin creates a Plant and map it with departments
-Admin creates an Approval Matrix correctly
+Admin creates a new user at Level 1 (Preparer/Trainer) - Done
+Admin creates a new Approver (Level 2 Approver) - DOne
+Admin creates a new Checker (Level 3 Checker) - Done
+Admin creates a Plant and map it with departments - Done
+Admin creates an Approval Matrix correctly - Done
 Preparer/Trainer (User 1) logs in and creates a New Training Plan
 Approver (User 2) views assigned plan and approves it
 Approver (User 2) views assigned plan and rejects it

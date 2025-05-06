@@ -258,15 +258,15 @@ public class ApprovalMatrixPage {
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("seleniumplant");
+        plantname.selectByVisibleText("automateplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("seleniumdepartment");
+        departmentname.selectByVisibleText("automatedepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Holder Fixing");
+        processflowname.selectByVisibleText("Holder Inspection");
 
         insideboxdatabcreatebutton.click();
     }
@@ -289,19 +289,19 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("selenium");
+        username.selectByVisibleText("automate");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("seleniumplant");
+        plantname.selectByVisibleText("automateplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("seleniumdepartment");
+        departmentname.selectByVisibleText("automatedepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Holder Fixing");
+        processflowname.selectByVisibleText("Holder Inspection");
 
         insideboxdatabcreatebutton.click();
     }
@@ -324,19 +324,19 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("seleniumchecker");
+        username.selectByVisibleText("automatechecker");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("seleniumplant");
+        plantname.selectByVisibleText("automateplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("seleniumdepartment");
+        departmentname.selectByVisibleText("automatedepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Holder Fixing");
+        processflowname.selectByVisibleText("Holder Inspection");
 
         insideboxdatabcreatebutton.click();
     }
@@ -359,19 +359,19 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("seleniumapprover");
+        username.selectByVisibleText("automateapprover");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("seleniumplant");
+        plantname.selectByVisibleText("automateplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("seleniumdepartment");
+        departmentname.selectByVisibleText("automatedepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Holder Fixing");
+        processflowname.selectByVisibleText("Holder Inspection");
 
         insideboxdatabcreatebutton.click();
     }

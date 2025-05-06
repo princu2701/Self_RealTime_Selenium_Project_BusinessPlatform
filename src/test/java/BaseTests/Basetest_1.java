@@ -42,7 +42,7 @@ public class Basetest_1 {
 
         System.out.println("==== SETUP: Browser is launching ====");
 
-        driver = new EdgeDriver();
+        driver = new FirefoxDriver();
 
         driver.get("http://172.16.30.59:8080/ords/f?p=172:LOGIN:4323551477942:::::");
 

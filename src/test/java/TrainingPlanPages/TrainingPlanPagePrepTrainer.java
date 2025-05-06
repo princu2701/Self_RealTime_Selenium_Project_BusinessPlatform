@@ -13,6 +13,7 @@ import java.time.Duration;
 
 public class TrainingPlanPagePrepTrainer {
 
+    Actions action;
     WebDriver driver;
     WebDriverWait wait;
     public TrainingPlanPagePrepTrainer(WebDriver driver) {
@@ -20,10 +21,12 @@ public class TrainingPlanPagePrepTrainer {
         this.driver=driver;
         PageFactory.initElements(driver,this);
         wait= new WebDriverWait(driver,Duration.ofSeconds(10));
+         action = new Actions(driver);
+
     }
 
     @FindBy(xpath = "//button[@id='B62250207009761428']")
-    private WebElement trainingplanformbutton;
+    private WebElement trainingplancreateformbutton;
 
     @FindBy(xpath = "//button[@id='B62250394349761429']")
     private WebElement trainingformbackbutton;
@@ -31,7 +34,7 @@ public class TrainingPlanPagePrepTrainer {
     @FindBy(xpath = "//select[@id='P16_PROCESS_FLOW']")
     private WebElement selectprocessflowbutton;
 
-    @FindBy(xpath = "(//*[@role='gridcell'])[2]")
+    @FindBy(css = "[id='igrep_ig_grid_vc_cur']")
     private WebElement associatenameentrybox;
 
     @FindBy(xpath = "(//*[@role='gridcell'])[3]")
@@ -50,6 +53,7 @@ public class TrainingPlanPagePrepTrainer {
     private WebElement cp4box;
 
     @FindBy(xpath = "(//*[@role='gridcell'])[8]")
+
     private WebElement cp5box;
 
     @FindBy(xpath = "(//*[@role='gridcell'])[9]")
@@ -86,7 +90,7 @@ public class TrainingPlanPagePrepTrainer {
         return addassociatesbutton;
     }
     public WebElement getTrainingplanformbutton() {
-        return trainingplanformbutton;
+        return trainingplancreateformbutton;
     }
 
     public WebElement getTrainingformbackbutton() {
@@ -155,52 +159,34 @@ public class TrainingPlanPagePrepTrainer {
 
     public void straightflow() throws InterruptedException {
 
-        trainingplanformbutton.click();
+        trainingplancreateformbutton.click();
         Select select = new Select(selectprocessflowbutton);
         select.selectByIndex(1);
-
-        Actions action = new Actions(driver);
+        Thread.sleep(1500);
         action.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
-
-        if(associatenameentrybox.isDisplayed()){
-
-            Thread.sleep(500);
-            action.doubleClick(associatenameentrybox).sendKeys("prince",Keys.TAB).build().perform();
-            System.out.println("Target is visible : "+ associatenameentrybox.getAttribute("value"));
-
-        }
-        Thread.sleep(200);
-        action.moveToElement(associateidentrybox).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(cp1box).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(cp2box).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(cp3box).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(cp4box).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(cp5box).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(generalrequirementbox).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(generalrequirementbox2).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(generalrequirementbox3).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(mandatoryrequirementbox1).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(mandatoryrequirementbox2).sendKeys("1",Keys.TAB).build().perform();
-        Thread.sleep(200);
-        action.moveToElement(asscoiateslastcolumnbox).sendKeys("1").build().perform();
-        remarksfield.sendKeys("CASE GENERATION IS SUCCESS FROM PREPARER");
+        Thread.sleep(1500);
+        action.moveToElement(associatenameentrybox).build().perform();
+        action.doubleClick(associatenameentrybox).sendKeys("prince",Keys.TAB).build().perform();
+        associateidentrybox.sendKeys("1",Keys.TAB);
+        action.moveToElement(cp1box).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(cp2box).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(cp3box).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(cp4box).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(cp5box).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(generalrequirementbox).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(generalrequirementbox2).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(generalrequirementbox3).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(mandatoryrequirementbox1).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(mandatoryrequirementbox2).sendKeys("1", Keys.TAB).perform();
+        action.moveToElement(asscoiateslastcolumnbox).sendKeys("1").perform();
+        action.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
+        remarksfield.sendKeys("Date ready for Checker Approval");
         submit.click();
-
     }
 
     public void flowscenario2() throws InterruptedException {
 
-        trainingplanformbutton.click();
+        trainingplancreateformbutton.click();
         Select select = new Select(selectprocessflowbutton);
         select.selectByIndex(1);
 
@@ -243,7 +229,7 @@ public class TrainingPlanPagePrepTrainer {
 
     public void flowscenario3() throws InterruptedException {
 
-        trainingplanformbutton.click();
+        trainingplancreateformbutton.click();
         Select select = new Select(selectprocessflowbutton);
         select.selectByIndex(1);
 
@@ -262,7 +248,7 @@ public class TrainingPlanPagePrepTrainer {
 
     public void flowscenario4() throws InterruptedException {
 
-        trainingplanformbutton.click();
+        trainingplancreateformbutton.click();
 
         Actions action = new Actions(driver);
         action.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
@@ -302,7 +288,7 @@ public class TrainingPlanPagePrepTrainer {
 
     public void testRemarksMaxLength() {
 
-        trainingplanformbutton.click();
+        trainingplancreateformbutton.click();
 
         wait.until(ExpectedConditions.visibilityOf(remarksfield));
 
@@ -315,7 +301,7 @@ public class TrainingPlanPagePrepTrainer {
 
     public void testFormSubmissionSavesData() throws InterruptedException {
 
-        trainingplanformbutton.click();
+        trainingplancreateformbutton.click();
         // 1. Fill valid data
         Actions actions = new Actions(driver);
 

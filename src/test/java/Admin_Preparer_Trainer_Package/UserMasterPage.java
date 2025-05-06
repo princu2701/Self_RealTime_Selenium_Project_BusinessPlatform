@@ -278,8 +278,8 @@ public class UserMasterPage extends GlobalMethods {
         // Fill in user details
         usermastercreateboxfirstnamebox.sendKeys("test1");
         usermastercreateboxlastnamebox.sendKeys("test2");
-        usermastercreateboxusernamebox.sendKeys("selenium");
-        usermastercreateboxpasswordbox.sendKeys("selenium");
+        usermastercreateboxusernamebox.sendKeys("automate");
+        usermastercreateboxpasswordbox.sendKeys("automate");
         usermastercreateboxemailbox.sendKeys("selenium@yopmail.com");
 
         Assert.assertEquals("selenium@yopmail.com", usermastercreateboxemailbox.getAttribute("value"));
@@ -324,11 +324,11 @@ public class UserMasterPage extends GlobalMethods {
         forcestop();
             WebElement plantname = driver.findElement(By.id("P10_PLANT_NAME"));
             Select plant = new Select(plantname);
-            plant.selectByVisibleText("seleniumplant");
+            plant.selectByVisibleText("automateplant");
 
             WebElement departmentname = driver.findElement(By.id("P10_DEPARTMENT_NAME"));
             Select department = new Select(departmentname);
-            department.selectByVisibleText("seleniumdepartment");
+            department.selectByVisibleText("automatedepartment");
 
             WebElement adminpermssion = driver.findElement(By.name("P10_IS_ADMIN"));
             Select admin = new Select(adminpermssion);
@@ -353,8 +353,8 @@ public class UserMasterPage extends GlobalMethods {
         // Fill in user details
         usermastercreateboxfirstnamebox.sendKeys("test1");
         usermastercreateboxlastnamebox.sendKeys("test2");
-        usermastercreateboxusernamebox.sendKeys("seleniumchecker");
-        usermastercreateboxpasswordbox.sendKeys("seleniumchecker");
+        usermastercreateboxusernamebox.sendKeys("automatechecker");
+        usermastercreateboxpasswordbox.sendKeys("automatechecker");
         usermastercreateboxemailbox.sendKeys("selenium@yopmail.com");
 
         Assert.assertEquals("selenium@yopmail.com", usermastercreateboxemailbox.getAttribute("value"));
@@ -385,11 +385,11 @@ public class UserMasterPage extends GlobalMethods {
         forcestop();
         WebElement plantname = driver.findElement(By.id("P10_PLANT_NAME"));
         Select plant = new Select(plantname);
-        plant.selectByVisibleText("seleniumplant");
+        plant.selectByVisibleText("automateplant");
 
         WebElement departmentname = driver.findElement(By.id("P10_DEPARTMENT_NAME"));
         Select department = new Select(departmentname);
-        department.selectByVisibleText("seleniumdepartment");
+        department.selectByVisibleText("automatedepartment");
 
         WebElement adminpermssion = driver.findElement(By.name("P10_IS_ADMIN"));
         Select admin = new Select(adminpermssion);
@@ -412,8 +412,8 @@ public class UserMasterPage extends GlobalMethods {
         // Fill in user details
         usermastercreateboxfirstnamebox.sendKeys("test1");
         usermastercreateboxlastnamebox.sendKeys("test2");
-        usermastercreateboxusernamebox.sendKeys("seleniumapprover");
-        usermastercreateboxpasswordbox.sendKeys("seleniumapprover");
+        usermastercreateboxusernamebox.sendKeys("automateapprover");
+        usermastercreateboxpasswordbox.sendKeys("automateapprover");
         usermastercreateboxemailbox.sendKeys("selenium@yopmail.com");
 
         Assert.assertEquals("selenium@yopmail.com", usermastercreateboxemailbox.getAttribute("value"));
@@ -442,14 +442,14 @@ public class UserMasterPage extends GlobalMethods {
         forcestop();
         WebElement plantname = driver.findElement(By.id("P10_PLANT_NAME"));
         Select plant = new Select(plantname);
-        plant.selectByVisibleText("seleniumplant");
+        plant.selectByVisibleText("automateplant");
 
         WebElement departmentname = driver.findElement(By.id("P10_DEPARTMENT_NAME"));
         Select department = new Select(departmentname);
-        department.selectByVisibleText("seleniumdepartment");
+        department.selectByVisibleText("automatedepartment");
 
-        WebElement adminpermssion = driver.findElement(By.name("P10_IS_ADMIN"));
-        Select admin = new Select(adminpermssion);
+        WebElement adminpermission = driver.findElement(By.name("P10_IS_ADMIN"));
+        Select admin = new Select(adminpermission);
         admin.selectByVisibleText("No");
         System.out.println("Username is : " + usermastercreateboxusernamebox.getAttribute("value"));
         System.out.println("Password is : " + usermastercreateboxpasswordbox.getAttribute("value"));
