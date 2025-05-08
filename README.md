@@ -327,7 +327,7 @@ As the **sole QA engineer** for this enterprise project, I've designed and imple
 
 <div align="center">
 
-**💼 [My LinkedIn](https://linkedin.com/in/your-profile)** | **🌐 [Portfolio](https://your-portfolio.com)** | **📧 [Email Me](mailto:your-email@example.com)**
+**💼 [My LinkedIn](https://linkedin.com/in/your-profile)** | **🌐 [Portfolio](https:/princu2701.github.io)** | **📧 [Email Me](mailto:princeraj27janu@gmail.com)**
 
 </div>
 
