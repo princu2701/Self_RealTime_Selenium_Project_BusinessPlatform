@@ -5,6 +5,7 @@ import Admin_Preparer_Trainer_Package.*;
 import ApproverModule_Pages.*;
 import CommonPage_Package.*;
 import ConclusionPackages.TrainingPlan_Page_FlowTesting;
+import GlobalMethodstoUse.GlobalMethods;
 import TrainingPlanPages.TrainingPlanPagePrepTrainer;
 import dashboard.TotalPlanPage;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
+import GlobalMethodstoUse.GlobalMethods;
 
 public class Basetest_1 {
 
@@ -36,6 +38,7 @@ public class Basetest_1 {
     protected WebDriverWait wait;
     protected TrainingPlanPagePrepTrainer trainingPlanPage;
     protected TotalPlanPage totalPlanPage;
+    protected GlobalMethods globalMethods;
 
     @BeforeMethod
     public void setup() {
@@ -92,6 +95,9 @@ public class Basetest_1 {
         approvalMatrixPage = new ApprovalMatrixPage(driver);
 
         totalPlanPage = new TotalPlanPage(driver);
+
+        globalMethods = new GlobalMethods();
+
     }
 
     @AfterMethod

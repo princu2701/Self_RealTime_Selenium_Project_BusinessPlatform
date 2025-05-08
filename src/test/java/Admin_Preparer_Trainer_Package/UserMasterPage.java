@@ -168,7 +168,6 @@ public class UserMasterPage extends GlobalMethods {
         usermastercreateboxfirstnamebox.sendKeys("****");
         usermastercreateboxlastnamebox.sendKeys("@)#!)@#_!@#OP@)PWLDFKGTOREP#WLDFCKVMBGKTREIKFGV<BMGRKELOCVGKREOWPSDFOKREO@#($RTOIGKFR#)@_!)@(#$OERFVBTREODKC");
         usermastercreateboxusernamebox.sendKeys("      wsodewosd!@#ERF             fgkr2034rog");
-        inboxcreatebutton.click();
 //        driver.switchTo().defaultContent();
     }
 
@@ -269,7 +268,7 @@ public class UserMasterPage extends GlobalMethods {
 
     }
     /// ///////////////////////////////////////////////////////////////
-    public void flowtestingdata() throws InterruptedException {
+    public void preptrainerflowtestingdata(String plantselect,String departmentselect,String username,String password) throws InterruptedException {
 
         WebElement framebox = driver.findElement(By.cssSelector("[title='User Master Form']"));
         driver.switchTo().frame(framebox);
@@ -278,8 +277,8 @@ public class UserMasterPage extends GlobalMethods {
         // Fill in user details
         usermastercreateboxfirstnamebox.sendKeys("test1");
         usermastercreateboxlastnamebox.sendKeys("test2");
-        usermastercreateboxusernamebox.sendKeys("automate");
-        usermastercreateboxpasswordbox.sendKeys("automate");
+        usermastercreateboxusernamebox.sendKeys(username);
+        usermastercreateboxpasswordbox.sendKeys(password);
         usermastercreateboxemailbox.sendKeys("selenium@yopmail.com");
 
         Assert.assertEquals("selenium@yopmail.com", usermastercreateboxemailbox.getAttribute("value"));
@@ -324,27 +323,26 @@ public class UserMasterPage extends GlobalMethods {
         forcestop();
             WebElement plantname = driver.findElement(By.id("P10_PLANT_NAME"));
             Select plant = new Select(plantname);
-            plant.selectByVisibleText("automateplant");
+            plant.selectByVisibleText(plantselect);
 
             WebElement departmentname = driver.findElement(By.id("P10_DEPARTMENT_NAME"));
             Select department = new Select(departmentname);
-            department.selectByVisibleText("automatedepartment");
-
+            department.selectByVisibleText(departmentselect);
+            Assert.assertTrue(usermastercreateboxusernamebox.getAttribute("value").contains(username));
             WebElement adminpermssion = driver.findElement(By.name("P10_IS_ADMIN"));
             Select admin = new Select(adminpermssion);
             admin.selectByVisibleText("No");
         System.out.println("Username is : " + usermastercreateboxusernamebox.getAttribute("value"));
         System.out.println("Password is : " + usermastercreateboxpasswordbox.getAttribute("value"));
         forcestop();
-        inboxcreatebutton.click();
         Assert.assertFalse(usermastercreateboxfirstnamebox.getAttribute("value").isEmpty());
-        driver.switchTo().defaultContent();
+//        driver.switchTo().defaultContent();
 
     }
 ////////////////////////////////////////////////////////////////////////
 
 
-    public void CheckerUserCreationflow() throws InterruptedException {
+    public void CheckerUserCreationflow(String plantselect,String departmentselect,String username,String password) throws InterruptedException {
 
         WebElement framebox = driver.findElement(By.cssSelector("[title='User Master Form']"));
         driver.switchTo().frame(framebox);
@@ -353,8 +351,8 @@ public class UserMasterPage extends GlobalMethods {
         // Fill in user details
         usermastercreateboxfirstnamebox.sendKeys("test1");
         usermastercreateboxlastnamebox.sendKeys("test2");
-        usermastercreateboxusernamebox.sendKeys("automatechecker");
-        usermastercreateboxpasswordbox.sendKeys("automatechecker");
+        usermastercreateboxusernamebox.sendKeys(username);
+        usermastercreateboxpasswordbox.sendKeys(password);
         usermastercreateboxemailbox.sendKeys("selenium@yopmail.com");
 
         Assert.assertEquals("selenium@yopmail.com", usermastercreateboxemailbox.getAttribute("value"));
@@ -385,25 +383,25 @@ public class UserMasterPage extends GlobalMethods {
         forcestop();
         WebElement plantname = driver.findElement(By.id("P10_PLANT_NAME"));
         Select plant = new Select(plantname);
-        plant.selectByVisibleText("automateplant");
+        plant.selectByVisibleText(plantselect);
 
         WebElement departmentname = driver.findElement(By.id("P10_DEPARTMENT_NAME"));
         Select department = new Select(departmentname);
-        department.selectByVisibleText("automatedepartment");
+        department.selectByVisibleText(departmentselect);
 
         WebElement adminpermssion = driver.findElement(By.name("P10_IS_ADMIN"));
         Select admin = new Select(adminpermssion);
         admin.selectByVisibleText("No");
+        Assert.assertTrue(usermastercreateboxusernamebox.getAttribute("value").contains(username));
         System.out.println("Username is : " + usermastercreateboxusernamebox.getAttribute("value"));
         System.out.println("Password is : " + usermastercreateboxpasswordbox.getAttribute("value"));
         forcestop();
-        inboxcreatebutton.click();
         Assert.assertFalse(usermastercreateboxfirstnamebox.getAttribute("value").isEmpty());
-        driver.switchTo().defaultContent();
+//        driver.switchTo().defaultContent();
 
     }
 /// ///////////////////////////////////////////////////////////
-    public void ApproverUserMasterCreationflow() throws InterruptedException {
+    public void ApproverUserMasterCreationflow(String plantselect,String departmentselect,String username,String password) throws InterruptedException {
 
         WebElement framebox = driver.findElement(By.cssSelector("[title='User Master Form']"));
         driver.switchTo().frame(framebox);
@@ -412,8 +410,8 @@ public class UserMasterPage extends GlobalMethods {
         // Fill in user details
         usermastercreateboxfirstnamebox.sendKeys("test1");
         usermastercreateboxlastnamebox.sendKeys("test2");
-        usermastercreateboxusernamebox.sendKeys("automateapprover");
-        usermastercreateboxpasswordbox.sendKeys("automateapprover");
+        usermastercreateboxusernamebox.sendKeys(username);
+        usermastercreateboxpasswordbox.sendKeys(password);
         usermastercreateboxemailbox.sendKeys("selenium@yopmail.com");
 
         Assert.assertEquals("selenium@yopmail.com", usermastercreateboxemailbox.getAttribute("value"));
@@ -442,21 +440,20 @@ public class UserMasterPage extends GlobalMethods {
         forcestop();
         WebElement plantname = driver.findElement(By.id("P10_PLANT_NAME"));
         Select plant = new Select(plantname);
-        plant.selectByVisibleText("automateplant");
+        plant.selectByVisibleText(plantselect);
 
         WebElement departmentname = driver.findElement(By.id("P10_DEPARTMENT_NAME"));
         Select department = new Select(departmentname);
-        department.selectByVisibleText("automatedepartment");
-
+        department.selectByVisibleText(departmentselect);
+        Assert.assertTrue(usermastercreateboxusernamebox.getAttribute("value").contains(username));
         WebElement adminpermission = driver.findElement(By.name("P10_IS_ADMIN"));
         Select admin = new Select(adminpermission);
         admin.selectByVisibleText("No");
         System.out.println("Username is : " + usermastercreateboxusernamebox.getAttribute("value"));
         System.out.println("Password is : " + usermastercreateboxpasswordbox.getAttribute("value"));
         forcestop();
-        inboxcreatebutton.click();
         Assert.assertFalse(usermastercreateboxfirstnamebox.getAttribute("value").isEmpty());
-        driver.switchTo().defaultContent();
+//        driver.switchTo().defaultContent();
 
     }
 }

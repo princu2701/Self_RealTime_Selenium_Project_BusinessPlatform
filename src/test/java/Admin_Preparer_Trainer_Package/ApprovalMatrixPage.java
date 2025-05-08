@@ -238,7 +238,7 @@ public class ApprovalMatrixPage {
         inboxdatacancelbuttonselection.click();
     }
 
-    public void approvalmatrix(){
+    public void approvalmatrixpreparercreator(){
 
         approvalmatrixbutton.click();
 
@@ -250,30 +250,33 @@ public class ApprovalMatrixPage {
 
         Select approvaltype = new Select(inboxapprovertypeselection);
 
-        approvaltype.selectByIndex(1);
+        approvaltype.selectByVisibleText("Preparer");
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("selenium");
+        username.selectByVisibleText("raisequery");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("automateplant");
+        plantname.selectByVisibleText("raisequerytestplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("automatedepartment");
+        departmentname.selectByVisibleText("raisequerytestdepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Holder Inspection");
+        processflowname.selectByVisibleText("Locator Pin Assy");
 
         insideboxdatabcreatebutton.click();
+
+        driver.switchTo().defaultContent();
     }
 
     /// ///////////////////////////////////////////////
 
     public void approvalmatrixtrainercreator(){
+
 
         approvalmatrixbutton.click();
 
@@ -289,21 +292,23 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("automate");
+        username.selectByVisibleText("raisequery");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("automateplant");
+        plantname.selectByVisibleText("raisequerytestplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("automatedepartment");
+        departmentname.selectByVisibleText("raisequerytestdepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Holder Inspection");
+        processflowname.selectByVisibleText("Locator Pin Assy");
 
         insideboxdatabcreatebutton.click();
+
+        driver.switchTo().defaultContent();
     }
 
     /// /////////////////////////
@@ -324,21 +329,23 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("automatechecker");
+        username.selectByVisibleText("raisequerychecker");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("automateplant");
+        plantname.selectByVisibleText("raisequerytestplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("automatedepartment");
+        departmentname.selectByVisibleText("raisequerytestdepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Holder Inspection");
+        processflowname.selectByVisibleText("Locator Pin Assy");
 
         insideboxdatabcreatebutton.click();
+
+        driver.switchTo().defaultContent();
     }
 
     /// /////////////////////////
@@ -359,21 +366,23 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("automateapprover");
+        username.selectByVisibleText("raisequeryapprover");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("automateplant");
+        plantname.selectByVisibleText("raisequerytestplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("automatedepartment");
+        departmentname.selectByVisibleText("raisequerytestdepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Holder Inspection");
+        processflowname.selectByVisibleText("Locator Pin Assy");
 
         insideboxdatabcreatebutton.click();
+
+        driver.switchTo().defaultContent();
     }
 
 }

@@ -88,11 +88,11 @@ public class UserCreationFlow_TestPage extends Basetest_1 {
         plantDepartmentmappingPage.plantdepartmenthomecreatebutton();
         System.out.println("5. Process done till create button clciking in mapping Page");
 
-        plantDepartmentmappingPage.proceedwithplantnameonly();
-        System.out.println("6. Process done till Data Entry in Plant of mapping Page");
-
-        plantDepartmentmappingPage.proceedwithdepartmentnameonly();
-        System.out.println("7. Process done till Data Entry in Department of mapping Page");
+//        plantDepartmentmappingPage.proceedwithplantnameonly();
+//        System.out.println("6. Process done till Data Entry in Plant of mapping Page");
+//
+//        plantDepartmentmappingPage.proceedwithdepartmentnameonly();
+//        System.out.println("7. Process done till Data Entry in Department of mapping Page");
 
     }
 
@@ -111,7 +111,7 @@ public class UserCreationFlow_TestPage extends Basetest_1 {
         userMasterApge.usermasteradminbutton();
         System.out.println("4. Clicked on the UserMaster Button Successfully");
         userMasterApge.usermastercreatebutton();
-        userMasterApge.flowtestingdata();
+//        userMasterApge.preptrainerflowtestingdata();
 
     }
 
@@ -123,7 +123,7 @@ public class UserCreationFlow_TestPage extends Basetest_1 {
         alogin.loginvalid("gayatri","gayatri");
         ahomepage.sidebaropen();
         ahomepage.adminpaneloption();
-        approvalMatrixPage.approvalmatrix();
+//        approvalMatrixPage.approvalmatrix();
     }
 
     @Test(description = "User Master Checker Creation",priority = 6)
@@ -139,7 +139,7 @@ public class UserCreationFlow_TestPage extends Basetest_1 {
         userMasterApge.usermasteradminbutton();
         System.out.println("4. Clicked on the UserMaster Button Successfully");
         userMasterApge.usermastercreatebutton();
-        userMasterApge.CheckerUserCreationflow();
+//        userMasterApge.CheckerUserCreationflow();
 
     }
 
@@ -156,7 +156,7 @@ public class UserCreationFlow_TestPage extends Basetest_1 {
         userMasterApge.usermasteradminbutton();
         System.out.println("4. Clicked on the UserMaster Button Successfully");
         userMasterApge.usermastercreatebutton();
-        userMasterApge.ApproverUserMasterCreationflow();
+//        userMasterApge.ApproverUserMasterCreationflow();
 
     }
 

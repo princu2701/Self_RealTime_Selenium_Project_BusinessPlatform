@@ -297,6 +297,7 @@ public class TrainingPlanPagePrepTrainer {
 
         // System should truncate to 1000 chars
         Assert.assertEquals(remarksfield.getAttribute("value").length(), 1001);
+
     }
 
     public void testFormSubmissionSavesData() throws InterruptedException {
@@ -311,7 +312,20 @@ public class TrainingPlanPagePrepTrainer {
         Thread.sleep(200);
         actions.moveToElement(associateidentrybox).sendKeys("101").build().perform();
        submit.click();
+
     }
+
+     public void approvalremarks() {
+
+      remarksfield.sendKeys("Data Approved");
+
+    }
+
+    public void raisequeryremarks(){
+
+        remarksfield.sendKeys("Raise Query in Data");
+    }
+
 
 
 }

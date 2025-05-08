@@ -32,7 +32,7 @@ public class UserRolesProcessFlow extends Basetest_1 {
         Thread.sleep(500);
         alogin.loginvalid("automatechecker", "automatechecker");
         ahomepage.pendingforcheckedviewdashboard();
-        totalPlanPage.clickViewButton();
+        totalPlanPage.clickViewButton(0);
         assertEquals(driver.getTitle(), "Training Plan");
         totalPlanPage.trainingplanpageprocessbycheckerapproval();
         Thread.sleep(2000);
@@ -54,7 +54,7 @@ public class UserRolesProcessFlow extends Basetest_1 {
         Thread.sleep(500);
         alogin.loginvalid("automateapprover", "automateapprover");
         ahomepage.totalplanviewdashboard();
-        totalPlanPage.clickViewButton();
+        totalPlanPage.clickViewButton(0);
         assertEquals(driver.getTitle(), "Training Plan");
         totalPlanPage.trainingplanpageprocessbyapprover();
         System.out.println("Training Plan Approval of Holder Fixing Process Done");
@@ -66,7 +66,7 @@ public class UserRolesProcessFlow extends Basetest_1 {
         Thread.sleep(500);
         alogin.loginvalid("automate","automate");
         ahomepage.totalplanviewdashboard();
-        totalPlanPage.clickViewButton();
+        totalPlanPage.clickViewButton(0);
         totalPlanPage.trainingplanpageprocessbytrainerfinalapprover();
 
     }

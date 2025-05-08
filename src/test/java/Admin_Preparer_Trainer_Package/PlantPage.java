@@ -71,12 +71,11 @@ public class PlantPage {
         Thread.sleep(500);
         driver.switchTo().frame(frameboxplant);
         insertplantname.sendKeys(plantname);
-        createnewplantdatabox.click();
     }
 
-    public void createplantwithoutenteringplantname(){
+    public void createplantbutton(){
 
-        driver.switchTo().frame(frameboxplant);
+//        driver.switchTo().frame(frameboxplant);
 
         createnewplantdatabox.click();
     }

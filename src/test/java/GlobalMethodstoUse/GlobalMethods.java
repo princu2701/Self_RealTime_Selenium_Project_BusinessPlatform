@@ -1,5 +1,8 @@
 package GlobalMethodstoUse;
 
+import BaseTests.Basetest_1;
+import CommonPage_Package.Homepage;
+import CommonPage_Package.LoginPage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class GlobalMethods {
+public class GlobalMethods  {
 
     WebDriver driver;
 
@@ -27,5 +30,7 @@ public class GlobalMethods {
 
         Thread.sleep(2000);
     }
+
+
 
 }

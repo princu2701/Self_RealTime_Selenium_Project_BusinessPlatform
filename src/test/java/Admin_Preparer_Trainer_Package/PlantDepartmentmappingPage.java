@@ -57,13 +57,17 @@ public class PlantDepartmentmappingPage {
         javascriptExecutor.executeScript("arguments[0].click();",plantdepartmentcreatebutton);
     }
 
-    public void proceedwithdepartmentnameonly(){
+    public void mappinkgokbutton(){
+
+                plantdeparmentmappingboxcreatebutton.click();
+
+    }
+    public void proceedwithdepartmentnameonly(String selectdepartment){
 
         driver.switchTo().frame(plantdepartmentmappingframebox);
         Select select=new Select(selectdeptnamebox);
-        select.selectByVisibleText("automatedepartment");
-        plantdeparmentmappingboxcreatebutton.click();
-        driver.switchTo().defaultContent();
+        select.selectByVisibleText(selectdepartment);
+//        driver.switchTo().defaultContent();
     }
 
     public void inboxcreatebuttonfordepartment(){
@@ -95,11 +99,11 @@ public class PlantDepartmentmappingPage {
         }
     }
 
-    public void proceedwithplantnameonly(){
+    public void proceedwithplantnameonly(String selectplant){
 
         driver.switchTo().frame(plantdepartmentmappingframebox);
         Select select=new Select(selectplantnamebox);
-        select.selectByVisibleText("automateplant");
+        select.selectByVisibleText(selectplant);
         System.out.println("All availabel Options are :" + select.getOptions());
         driver.switchTo().defaultContent();
 

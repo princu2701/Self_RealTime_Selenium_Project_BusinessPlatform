@@ -38,8 +38,17 @@ public class TotalPlanPage {
     @FindBy(id = "B63633022167151037")
     private WebElement insidetotalplanraisequerybyapproverbutton;
 
-    public void clickViewButton() {
-        viewButton.get(0).click();
+    @FindBy(xpath = "(//*[.='Raise Query By Checker'])[2]")
+    private WebElement insidetotalplanraisequerybycheckerbutton;
+
+
+    public void insidetotalplanRaiseQueryByCheckerbutton() {
+
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", insidetotalplanraisequerybycheckerbutton);
+    }
+    public void clickViewButton(int viewdocumentnumber) {
+        viewButton.get(viewdocumentnumber).click();
 
     }
 
@@ -59,12 +68,27 @@ public class TotalPlanPage {
 
             // Locate remarks input and approval button
             WebElement trainingplanpageremarksbox = driver.findElement(By.name("P16_REMARKS"));
-            WebElement approvalbycheckerbutton = driver.findElement(By.xpath("(//*[@type='button'])[13]"));
 
             // Fill in the remarks and click the approval button
             trainingplanpageremarksbox.sendKeys("Associate Checked Successfully");
-            js.executeScript("arguments[0].click();", approvalbycheckerbutton);
 
+
+    }
+
+    public void checkbutton() {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        WebElement approvalbycheckerbutton = driver.findElement(By.xpath("(//*[@type='button'])[13]"));
+
+        Actions actions = new Actions(driver);
+
+        actions.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(approvalbycheckerbutton));
+
+        js.executeScript("arguments[0].click();", approvalbycheckerbutton);
 
     }
 
@@ -111,5 +135,28 @@ public class TotalPlanPage {
         System.out.println(driver.getCurrentUrl());
 
     }
+
+    public boolean isRemarksVisible() {
+        try {
+            return driver.findElement(By.xpath("//td[normalize-space()='Date ready for Checker Approval']")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public void insidetotalplanapprovalbyapproverbutton() {
+
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", insidetotalplanapprovalbyapproverbutton);
+    }
+
+    public void insidetotalplanraisequerybyapproverbutton() {
+
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", insidetotalplanraisequerybyapproverbutton);
+    }
+
+
+
 
 }

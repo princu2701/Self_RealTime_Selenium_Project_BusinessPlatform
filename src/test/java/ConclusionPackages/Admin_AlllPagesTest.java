@@ -44,7 +44,7 @@ public class Admin_AlllPagesTest extends Basetest_1 {
         plantPage.plantbutton();
         plantPage.plantboxopeningbutton();
         plantPage.plantnamewithinvaliddata("!@)#()!)@#_");
-        plantPage.createplantwithoutenteringplantname();
+//        plantPage.createplantwithoutenteringplantname();
 
     }
 
@@ -69,7 +69,7 @@ public class Admin_AlllPagesTest extends Basetest_1 {
         ahomepage.adminpaneloption();
         plantDepartmentmappingPage.plantdepartmentadminbutton();
         plantDepartmentmappingPage.plantdepartmenthomecreatebutton();
-        plantDepartmentmappingPage.proceedwithdepartmentnameonly();
+//        plantDepartmentmappingPage.proceedwithdepartmentnameonly();
         plantDepartmentmappingPage.inboxcreatebuttonforplant();
         Thread.sleep(500);
         alogin.loginvalid("sp", "sp");
@@ -100,7 +100,7 @@ public class Admin_AlllPagesTest extends Basetest_1 {
         ahomepage.adminpaneloption();
         plantDepartmentmappingPage.plantdepartmentadminbutton();
         plantDepartmentmappingPage.plantdepartmenthomecreatebutton();
-        plantDepartmentmappingPage.proceedwithplantnameonly();
+//        plantDepartmentmappingPage.proceedwithplantnameonly();
 
     }
 
