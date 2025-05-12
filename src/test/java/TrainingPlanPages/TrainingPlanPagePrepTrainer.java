@@ -162,12 +162,13 @@ public class TrainingPlanPagePrepTrainer {
         trainingplancreateformbutton.click();
         Select select = new Select(selectprocessflowbutton);
         select.selectByIndex(1);
-        Thread.sleep(1500);
+        Thread.sleep(500);
         action.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
-        Thread.sleep(1500);
+        Thread.sleep(500);
         action.moveToElement(associatenameentrybox).build().perform();
         action.doubleClick(associatenameentrybox).sendKeys("prince",Keys.TAB).build().perform();
-        associateidentrybox.sendKeys("1",Keys.TAB);
+        Thread.sleep(500);
+        action.moveToElement(associateidentrybox).sendKeys("101",Keys.TAB).build().perform();
         action.moveToElement(cp1box).sendKeys("1", Keys.TAB).perform();
         action.moveToElement(cp2box).sendKeys("1", Keys.TAB).perform();
         action.moveToElement(cp3box).sendKeys("1", Keys.TAB).perform();
@@ -319,6 +320,11 @@ public class TrainingPlanPagePrepTrainer {
 
       remarksfield.sendKeys("Data Approved");
 
+    }
+
+    public void rejectremarks() {
+
+        remarksfield.sendKeys("Data Rejected");
     }
 
     public void raisequeryremarks(){

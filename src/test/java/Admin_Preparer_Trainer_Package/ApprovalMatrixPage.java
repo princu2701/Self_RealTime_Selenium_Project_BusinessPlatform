@@ -254,19 +254,19 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("raisequery");
+        username.selectByVisibleText("rejection");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("raisequerytestplant");
+        plantname.selectByVisibleText("rejectiontestplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("raisequerytestdepartment");
+        departmentname.selectByVisibleText("rejectiontestdepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Locator Pin Assy");
+        processflowname.selectByVisibleText("BCK Assembly");
 
         insideboxdatabcreatebutton.click();
 
@@ -292,19 +292,19 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("raisequery");
+        username.selectByVisibleText("rejection");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("raisequerytestplant");
+        plantname.selectByVisibleText("rejectiontestplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("raisequerytestdepartment");
+        departmentname.selectByVisibleText("rejectiontestdepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Locator Pin Assy");
+        processflowname.selectByVisibleText("BCK Assembly");
 
         insideboxdatabcreatebutton.click();
 
@@ -329,19 +329,19 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("raisequerychecker");
+        username.selectByVisibleText("rejectionchecker");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("raisequerytestplant");
+        plantname.selectByVisibleText("rejectiontestplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("raisequerytestdepartment");
+        departmentname.selectByVisibleText("rejectiontestdepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Locator Pin Assy");
+        processflowname.selectByVisibleText("BCK Assembly");
 
         insideboxdatabcreatebutton.click();
 
@@ -366,19 +366,19 @@ public class ApprovalMatrixPage {
 
         Select username = new Select(inboxusernameselection);
 
-        username.selectByVisibleText("raisequeryapprover");
+        username.selectByVisibleText("rejectionapprover");
 
         Select plantname = new Select(inboxplantnameselection);
 
-        plantname.selectByVisibleText("raisequerytestplant");
+        plantname.selectByVisibleText("rejectiontestplant");
 
         Select departmentname = new Select(inboxdepartmentnameselection);
 
-        departmentname.selectByVisibleText("raisequerytestdepartment");
+        departmentname.selectByVisibleText("rejectiontestdepartment");
 
         Select processflowname = new Select(inboxprocessflownmaeselection);
 
-        processflowname.selectByVisibleText("Locator Pin Assy");
+        processflowname.selectByVisibleText("BCK Assembly");
 
         insideboxdatabcreatebutton.click();
 

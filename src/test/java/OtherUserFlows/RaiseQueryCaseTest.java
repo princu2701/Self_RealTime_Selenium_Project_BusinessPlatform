@@ -127,7 +127,7 @@ public class RaiseQueryCaseTest extends Basetest_1 {
 
         Thread.sleep(500);
         alogin.loginvalid("raisequerychecker","raisequerychecker");
-        System.out.println("1. Logged in Succesfully");
+        System.out.println("1. Logged in as Checker Succesfully");
         ahomepage.totalplanviewdashboard();
         totalPlanPage.clickViewButton(0);
         totalPlanPage.trainingplanpageprocessbycheckerapproval();
@@ -141,7 +141,7 @@ public class RaiseQueryCaseTest extends Basetest_1 {
 
         Thread.sleep(500);
         alogin.loginvalid("raisequery","raisequery");
-        System.out.println("1. Logged in Succesfully");
+        System.out.println("1. Logged in as Preparer Succesfully");
         ahomepage.totalplanviewdashboard();
         totalPlanPage.clickViewButton(0);
         totalPlanPage.isRemarksVisible();
@@ -155,7 +155,7 @@ public class RaiseQueryCaseTest extends Basetest_1 {
 
         Thread.sleep(200);
         alogin.loginvalid("raisequerychecker","raisequerychecker");
-        System.out.println("1. Logged in Succesfully");
+        System.out.println("1. Logged in as Checker Succesfully");
         ahomepage.totalplanviewdashboard();
         totalPlanPage.clickViewButton(0);
         totalPlanPage.isRemarksVisible();
@@ -169,7 +169,7 @@ public class RaiseQueryCaseTest extends Basetest_1 {
 
         Thread.sleep(200);
         alogin.loginvalid("raisequeryapprover","raisequeryapprover");
-        System.out.println("1. Logged in Succesfully");
+        System.out.println("1. Logged in as Approver Succesfully");
         ahomepage.totalplanviewdashboard();
         totalPlanPage.clickViewButton(0);
         totalPlanPage.isRemarksVisible();
@@ -214,6 +214,21 @@ public class RaiseQueryCaseTest extends Basetest_1 {
 
     }
 
+    @Test(description = "Approval By Trainer",priority =16)
+    public void approvalfromtrainer() throws InterruptedException {
+
+
+
+        Thread.sleep(200);
+        alogin.loginvalid("raisequery","raisequery");
+        System.out.println("1. Logged in as Trainer  Succesfully");
+        ahomepage.totalplanviewdashboard();
+        totalPlanPage.clickViewButton(0);
+        totalPlanPage.isRemarksVisible();
+        trainingPlanPage.approvalremarks();
+        totalPlanPage.trainingplancompletionbutton();
+        RaiseQueryCaseTest.adminactivity();
+    }
 
 
 
@@ -228,13 +243,27 @@ public class RaiseQueryCaseTest extends Basetest_1 {
 
 
 
-//*****************************************************************************************************
 
-        /*
-        Below is a global type method
-         */
 
-        public void adminactivity() throws InterruptedException {
+
+
+
+
+
+
+
+
+
+
+
+
+//*****************************************************************************************************\\
+
+                                 /*
+                                  Below is a global type method
+                                                              */
+
+        public static void adminactivity() throws InterruptedException {
 
             Thread.sleep(200);
             alogin.loginvalid("gayatri","gayatri");
@@ -243,7 +272,7 @@ public class RaiseQueryCaseTest extends Basetest_1 {
 
         }
 
-//*****************************************************************************************************
+//*****************************************************************************************************\\
 
     }
 

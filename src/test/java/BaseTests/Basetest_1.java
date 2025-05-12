@@ -19,29 +19,29 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 import GlobalMethodstoUse.GlobalMethods;
 
-public class Basetest_1 {
+public  class  Basetest_1 {
 
-    protected TrainingPlan_Page_FlowTesting realtimeFlowTestPage;
-    protected PlantPage plantPage;
-    protected DepartmentPage departmentPage;
-    protected PlantDepartmentmappingPage plantDepartmentmappingPage;
-    protected UserMasterPage userMasterApge;
-    protected ApprovalMatrixPage approvalMatrixPage;
-    protected CaseDetailsPage caseDetailsPage;
-    protected CaseListPage caseListPage;
-    protected DashboardPage dashboardPage;
-    protected LoginPage alogin;
-    protected Homepage ahomepage;
-    protected ApproverHomepage approverHomepage;
-    protected ApproverTrainingPlanPage approverTrainingPlanPage;
-    protected WebDriver driver;
-    protected WebDriverWait wait;
-    protected TrainingPlanPagePrepTrainer trainingPlanPage;
-    protected TotalPlanPage totalPlanPage;
-    protected GlobalMethods globalMethods;
+    protected static TrainingPlan_Page_FlowTesting realtimeFlowTestPage;
+    protected static PlantPage plantPage;
+    protected static DepartmentPage departmentPage;
+    protected static PlantDepartmentmappingPage plantDepartmentmappingPage;
+    protected static UserMasterPage userMasterApge;
+    protected static ApprovalMatrixPage approvalMatrixPage;
+    protected static CaseDetailsPage caseDetailsPage;
+    protected static CaseListPage caseListPage;
+    protected static DashboardPage dashboardPage;
+    protected static LoginPage alogin;
+    protected static Homepage ahomepage;
+    protected static ApproverHomepage approverHomepage;
+    protected static ApproverTrainingPlanPage approverTrainingPlanPage;
+    protected static WebDriver driver;
+    protected static WebDriverWait wait;
+    protected static TrainingPlanPagePrepTrainer trainingPlanPage;
+    protected static TotalPlanPage totalPlanPage;
+    protected static GlobalMethods globalMethods;
 
     @BeforeMethod
-    public void setup() {
+    public static void setup() {
 
         System.out.println("==== SETUP: Browser is launching ====");
 

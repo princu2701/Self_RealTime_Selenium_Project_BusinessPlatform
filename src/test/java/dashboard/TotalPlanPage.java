@@ -41,6 +41,9 @@ public class TotalPlanPage {
     @FindBy(xpath = "(//*[.='Raise Query By Checker'])[2]")
     private WebElement insidetotalplanraisequerybycheckerbutton;
 
+    @FindBy(xpath = "//button[@id='B63630811748151015']")
+    private WebElement insidetotalplanrejectionbyapprverbutton;
+
 
     public void insidetotalplanRaiseQueryByCheckerbutton() {
 
@@ -156,7 +159,21 @@ public class TotalPlanPage {
         jsExecutor.executeScript("arguments[0].click();", insidetotalplanraisequerybyapproverbutton);
     }
 
+    public void trainingplancompletionbutton() throws InterruptedException {
 
+        WebElement trainingplancompletionbutton=driver.findElement(By.xpath("//button[@id='B66299145392230750']"));
 
+        Actions actions = new Actions(driver);
+
+        actions.keyDown(Keys.PAGE_DOWN).keyUp(Keys.PAGE_DOWN).build().perform();
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", trainingplancompletionbutton);
+    }
+
+    public void insidetotalplanrejectionbyapprverbutton() {
+
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", insidetotalplanrejectionbyapprverbutton);
+    }
 
 }
